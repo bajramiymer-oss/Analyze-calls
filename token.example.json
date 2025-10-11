@@ -1,7 +1,0 @@
-{
-    "access_token": "",
-    "token_type": "Bearer",
-    "refresh_token": "",
-    "expires_in": 0,
-    "scope": "https://www.googleapis.com/auth/drive"
-}
