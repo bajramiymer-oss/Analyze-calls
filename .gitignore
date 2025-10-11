@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+env.bak/
+venv.bak/
+
+# Secrets and credentials
+# These files contain API keys or database passwords and should never be committed.
+token.json
+credentials.json
+.streamlit/secrets.toml
+config.py
+
+# Logs and temporary files
+*.log
+out_analysis/
