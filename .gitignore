@@ -19,3 +19,18 @@ config.py
 # Logs and temporary files
 *.log
 out_analysis/
+logs/
+
+# Deployment files
+deploy.sh
+ecosystem.config.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
