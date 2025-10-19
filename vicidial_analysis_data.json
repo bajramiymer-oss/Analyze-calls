@@ -1,0 +1,7159 @@
+{
+  "collection_date": "2025-10-14T09:16:59.078776",
+  "campaign_id": "autobiz",
+  "db_key": "db2",
+  "analysis_period_days": 7.0,
+  "campaign_config": {
+    "campaign_id": "autobiz",
+    "campaign_name": "autoTIM",
+    "active": "Y",
+    "dial_status_a": "",
+    "dial_status_b": "",
+    "dial_status_c": "",
+    "dial_status_d": "",
+    "dial_status_e": "",
+    "lead_order": "RANDOM",
+    "park_ext": "",
+    "park_file_name": "customer_waiting_for_agent",
+    "web_form_address": "",
+    "allow_closers": "Y",
+    "hopper_level": 1000.0,
+    "auto_dial_level": "700",
+    "next_agent_call": "oldest_call_finish",
+    "local_call_time": "24hours",
+    "voicemail_ext": "",
+    "dial_timeout": 30.0,
+    "dial_prefix": "85425874645674",
+    "campaign_cid": "0000000000",
+    "campaign_vdad_exten": "8375",
+    "campaign_rec_exten": "8309",
+    "campaign_recording": "ONDEMAND",
+    "campaign_rec_filename": "FULLDATE_CUSTPHONE",
+    "campaign_script": "",
+    "get_call_launch": "NONE",
+    "am_message_exten": "vm-goodbye",
+    "amd_send_to_vmx": "N",
+    "xferconf_a_dtmf": "",
+    "xferconf_a_number": "",
+    "xferconf_b_dtmf": "",
+    "xferconf_b_number": "",
+    "alt_number_dialing": "N",
+    "scheduled_callbacks": "N",
+    "lead_filter_id": "NONE",
+    "drop_call_seconds": 5.0,
+    "drop_action": "AUDIO",
+    "safe_harbor_exten": "8307",
+    "display_dialable_count": "Y",
+    "wrapup_seconds": 0.0,
+    "wrapup_message": "Wrapup Call",
+    "closer_campaigns": null,
+    "use_internal_dnc": "Y",
+    "allcalls_delay": 0.0,
+    "omit_phone_code": "N",
+    "dial_method": "RATIO",
+    "available_only_ratio_tally": "N",
+    "adaptive_dropped_percentage": "3",
+    "adaptive_maximum_level": "3.0",
+    "adaptive_latest_server_time": "2100",
+    "adaptive_intensity": "0",
+    "adaptive_dl_diff_target": 0.0,
+    "concurrent_transfers": "AUTO",
+    "auto_alt_dial": "NONE",
+    "auto_alt_dial_statuses": " B N NA DC -",
+    "agent_pause_codes_active": "N",
+    "campaign_description": "autoTIM",
+    "campaign_changedate": "2025-10-09T12:07:27",
+    "campaign_stats_refresh": "N",
+    "campaign_logindate": "2025-10-14T09:16:55",
+    "dial_statuses": " AA NA PU SVYCLM ERI LRERR TIMEOT NI PDROP PM N B AB NEW -",
+    "disable_alter_custdata": "N",
+    "no_hopper_leads_logins": "Y",
+    "list_order_mix": "DISABLED",
+    "campaign_allow_inbound": "N",
+    "manual_dial_list_id": 998.0,
+    "default_xfer_group": "---NONE---",
+    "xfer_groups": "",
+    "queue_priority": 50.0,
+    "drop_inbound_group": "---NONE---",
+    "qc_enabled": "N",
+    "qc_statuses": null,
+    "qc_lists": null,
+    "qc_shift_id": "24HRMIDNIGHT",
+    "qc_get_record_launch": "NONE",
+    "qc_show_recording": "Y",
+    "qc_web_form_address": null,
+    "qc_script": null,
+    "survey_first_audio_file": "Appertura_60_anni",
+    "survey_dtmf_digits": "1238",
+    "survey_ni_digit": "3",
+    "survey_opt_in_audio_file": "",
+    "survey_ni_audio_file": "",
+    "survey_method": "CALLMENU",
+    "survey_no_response_action": "OPTOUT",
+    "survey_ni_status": "AA",
+    "survey_response_digit_map": "1-DEMOCRAT|2-REPUBLICAN|3-INDEPENDANT|8-OPTOUT|X-NO RESPONSE|",
+    "survey_xfer_exten": "8300",
+    "survey_camp_record_dir": "/home/survey",
+    "disable_alter_custphone": "Y",
+    "display_queue_count": "Y",
+    "manual_dial_filter": "NONE",
+    "agent_clipboard_copy": "NONE",
+    "agent_extended_alt_dial": "N",
+    "use_campaign_dnc": "Y",
+    "three_way_call_cid": "CAMPAIGN",
+    "three_way_dial_prefix": "",
+    "web_form_target": "vdcwebform",
+    "vtiger_search_category": "LEAD",
+    "vtiger_create_call_record": "Y",
+    "vtiger_create_lead_record": "Y",
+    "vtiger_screen_login": "Y",
+    "cpd_amd_action": "DISABLED",
+    "agent_allow_group_alias": "N",
+    "default_group_alias": "",
+    "vtiger_search_dead": "ASK",
+    "vtiger_status_call": "N",
+    "survey_third_digit": "",
+    "survey_third_audio_file": "US_thanks_no_contact",
+    "survey_third_status": "NI",
+    "survey_third_exten": "8300",
+    "survey_fourth_digit": "",
+    "survey_fourth_audio_file": "",
+    "survey_fourth_status": "NI",
+    "survey_fourth_exten": "8300",
+    "drop_lockout_time": "0",
+    "quick_transfer_button": "N",
+    "prepopulate_transfer_preset": "N",
+    "drop_rate_group": "DISABLED",
+    "view_calls_in_queue": "NONE",
+    "view_calls_in_queue_launch": "MANUAL",
+    "grab_calls_in_queue": "N",
+    "call_requeue_button": "N",
+    "pause_after_each_call": "N",
+    "no_hopper_dialing": "N",
+    "agent_dial_owner_only": "NONE",
+    "agent_display_dialable_leads": "N",
+    "web_form_address_two": "",
+    "waitforsilence_options": "",
+    "agent_select_territories": "N",
+    "campaign_calldate": "2025-10-14T09:16:57",
+    "crm_popup_login": "N",
+    "crm_login_address": "",
+    "timer_action": "NONE",
+    "timer_action_message": "",
+    "timer_action_seconds": 1.0,
+    "start_call_url": "",
+    "dispo_call_url": "",
+    "xferconf_c_number": "",
+    "xferconf_d_number": "",
+    "xferconf_e_number": "",
+    "use_custom_cid": "N",
+    "scheduled_callbacks_alert": "NONE",
+    "queuemetrics_callstatus_override": "DISABLED",
+    "extension_appended_cidname": "N",
+    "scheduled_callbacks_count": "ALL_ACTIVE",
+    "manual_dial_override": "NONE",
+    "blind_monitor_warning": "DISABLED",
+    "blind_monitor_message": "Someone is blind monitoring your session",
+    "blind_monitor_filename": "",
+    "inbound_queue_no_dial": "DISABLED",
+    "timer_action_destination": "",
+    "enable_xfer_presets": "DISABLED",
+    "hide_xfer_number_to_dial": "DISABLED",
+    "manual_dial_prefix": "85425874645674",
+    "customer_3way_hangup_logging": "ENABLED",
+    "customer_3way_hangup_seconds": 5.0,
+    "customer_3way_hangup_action": "NONE",
+    "ivr_park_call": "DISABLED",
+    "ivr_park_call_agi": "",
+    "manual_preview_dial": "PREVIEW_AND_SKIP",
+    "realtime_agent_time_stats": "CALLS_WAIT_CUST_ACW_PAUSE",
+    "use_auto_hopper": "Y",
+    "auto_hopper_multi": "1",
+    "auto_hopper_level": 1400.0,
+    "auto_trim_hopper": "Y",
+    "api_manual_dial": "STANDARD",
+    "manual_dial_call_time_check": "DISABLED",
+    "display_leads_count": "Y",
+    "lead_order_randomize": "N",
+    "lead_order_secondary": "LEAD_ASCEND",
+    "per_call_notes": "DISABLED",
+    "my_callback_option": "UNCHECKED",
+    "agent_lead_search": "DISABLED",
+    "agent_lead_search_method": "CAMPLISTS_ALL",
+    "queuemetrics_phone_environment": "",
+    "auto_pause_precall": "N",
+    "auto_pause_precall_code": "PRECAL",
+    "auto_resume_precall": "N",
+    "manual_dial_cid": "CAMPAIGN",
+    "post_phone_time_diff_alert": "DISABLED",
+    "custom_3way_button_transfer": "DISABLED",
+    "available_only_tally_threshold": "DISABLED",
+    "available_only_tally_threshold_agents": 0.0,
+    "dial_level_threshold": "DISABLED",
+    "dial_level_threshold_agents": 0.0,
+    "safe_harbor_audio": "buzz",
+    "safe_harbor_menu_id": "",
+    "survey_menu_id": "1azz",
+    "callback_days_limit": 0.0,
+    "dl_diff_target_method": "ADAPT_CALC_ONLY",
+    "disable_dispo_screen": "DISPO_ENABLED",
+    "disable_dispo_status": "",
+    "screen_labels": "--SYSTEM-SETTINGS--",
+    "status_display_fields": "CALLID",
+    "na_call_url": "",
+    "survey_recording": "N",
+    "pllb_grouping": "DISABLED",
+    "pllb_grouping_limit": 50.0,
+    "call_count_limit": 0.0,
+    "call_count_target": 3.0,
+    "callback_hours_block": 0.0,
+    "callback_list_calltime": "DISABLED",
+    "user_group": "ADMIN",
+    "hopper_vlc_dup_check": "N",
+    "in_group_dial": "DISABLED",
+    "in_group_dial_select": "CAMPAIGN_SELECTED",
+    "safe_harbor_audio_field": "DISABLED",
+    "pause_after_next_call": "DISABLED",
+    "owner_populate": "DISABLED",
+    "use_other_campaign_dnc": "",
+    "allow_emails": "N",
+    "amd_inbound_group": "---NONE---",
+    "amd_callmenu": "---NONE---",
+    "survey_wait_sec": 0.0,
+    "manual_dial_lead_id": "N",
+    "dead_max": 0.0,
+    "dead_max_dispo": "DCMX",
+    "dispo_max": 0.0,
+    "dispo_max_dispo": "DISMX",
+    "pause_max": 0.0,
+    "max_inbound_calls": 0.0,
+    "manual_dial_search_checkbox": "SELECTED",
+    "hide_call_log_info": "N",
+    "timer_alt_seconds": 0.0,
+    "wrapup_bypass": "ENABLED",
+    "wrapup_after_hotkey": "DISABLED",
+    "callback_active_limit": 0.0,
+    "callback_active_limit_override": "N",
+    "allow_chats": "N",
+    "comments_all_tabs": "DISABLED",
+    "comments_dispo_screen": "DISABLED",
+    "comments_callback_screen": "DISABLED",
+    "qc_comment_history": "CLICK",
+    "show_previous_callback": "ENABLED",
+    "clear_script": "DISABLED",
+    "cpd_unknown_action": "DISABLED",
+    "manual_dial_search_filter": "NONE",
+    "web_form_address_three": "",
+    "manual_dial_override_field": "ENABLED",
+    "status_display_ingroup": "ENABLED",
+    "customer_gone_seconds": 30.0,
+    "agent_display_fields": "",
+    "am_message_wildcards": "N",
+    "manual_dial_timeout": "",
+    "routing_initiated_recordings": "Y",
+    "manual_dial_hopper_check": "N",
+    "callback_useronly_move_minutes": 0.0,
+    "ofcom_uk_drop_calc": "N",
+    "manual_auto_next": 0.0,
+    "manual_auto_show": "N",
+    "allow_required_fields": "N",
+    "dead_to_dispo": "DISABLED",
+    "agent_xfer_validation": "N",
+    "ready_max_logout": 0.0,
+    "callback_display_days": 0.0,
+    "three_way_record_stop": "N",
+    "hangup_xfer_record_start": "N",
+    "scheduled_callbacks_email_alert": "N",
+    "max_inbound_calls_outcome": "DEFAULT",
+    "manual_auto_next_options": "DEFAULT",
+    "agent_screen_time_display": "DISABLED",
+    "next_dial_my_callbacks": "DISABLED",
+    "inbound_no_agents_no_dial_container": "",
+    "inbound_no_agents_no_dial_threshold": 0.0,
+    "cid_group_id": "---DISABLED---",
+    "pause_max_dispo": "PAUSMX",
+    "script_top_dispo": "N",
+    "dead_trigger_seconds": 0.0,
+    "dead_trigger_action": "DISABLED",
+    "dead_trigger_repeat": "NO",
+    "dead_trigger_filename": "",
+    "dead_trigger_url": "",
+    "scheduled_callbacks_force_dial": "N",
+    "scheduled_callbacks_auto_reschedule": "DISABLED",
+    "scheduled_callbacks_timezones_container": "DISABLED",
+    "three_way_volume_buttons": "ENABLED",
+    "callback_dnc": "DISABLED",
+    "manual_dial_validation": "N",
+    "mute_recordings": "N",
+    "auto_active_list_new": "DISABLED",
+    "call_quota_lead_ranking": "DISABLED",
+    "call_quota_process_running": 0.0,
+    "call_quota_last_run_date": null,
+    "sip_event_logging": "DISABLED",
+    "campaign_script_two": "",
+    "leave_vm_no_dispo": "DISABLED",
+    "leave_vm_message_group_id": "---NONE---",
+    "dial_timeout_lead_container": "DISABLED",
+    "amd_type": "AMD",
+    "vmm_daily_limit": 0.0,
+    "opensips_cid_name": "",
+    "amd_agent_route_options": "DISABLED",
+    "browser_alert_sound": "---NONE---",
+    "browser_alert_volume": 50.0,
+    "three_way_record_stop_exception": "DISABLED",
+    "pause_max_exceptions": "",
+    "hopper_drop_run_trigger": "N",
+    "daily_call_count_limit": 0.0,
+    "daily_limit_manual": "DISABLED",
+    "transfer_button_launch": "NONE",
+    "shared_dial_rank": 99.0,
+    "agent_search_method": "",
+    "qc_scorecard_id": "",
+    "qc_statuses_id": "",
+    "clear_form": "ACKNOWLEDGE",
+    "leave_3way_start_recording": "DISABLED",
+    "leave_3way_start_recording_exception": "DISABLED",
+    "calls_waiting_vl_one": "DISABLED",
+    "calls_waiting_vl_two": "DISABLED",
+    "calls_inqueue_count_one": "DISABLED",
+    "calls_inqueue_count_two": "DISABLED",
+    "in_man_dial_next_ready_seconds": 0.0,
+    "in_man_dial_next_ready_seconds_override": "DISABLED",
+    "transfer_no_dispo": "DISABLED",
+    "call_limit_24hour_method": "DISABLED",
+    "call_limit_24hour_scope": "SYSTEM_WIDE",
+    "call_limit_24hour": 0.0,
+    "call_limit_24hour_override": "DISABLED",
+    "cid_group_id_two": "---DISABLED---",
+    "incall_tally_threshold_seconds": 0.0,
+    "auto_alt_threshold": 0.0,
+    "pause_max_url": "",
+    "agent_hide_hangup": "N",
+    "ig_xfer_list_sort": "GROUP_ID_UP",
+    "script_tab_frame_size": "DEFAULT"
+  },
+  "custom_fields": [
+    {
+      "COLUMN_NAME": "vendor_lead_code",
+      "DATA_TYPE": "varchar",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "COLUMN_NAME": "source_id",
+      "DATA_TYPE": "varchar",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "COLUMN_NAME": "province",
+      "DATA_TYPE": "varchar",
+      "COLUMN_COMMENT": ""
+    },
+    {
+      "COLUMN_NAME": "rank",
+      "DATA_TYPE": "smallint",
+      "COLUMN_COMMENT": ""
+    }
+  ],
+  "active_lists": [
+    {
+      "list_id": 404.0,
+      "list_name": "BUSINESS MOBILE SUD",
+      "active": "Y",
+      "list_description": "BUSINESS MOBILE SUD",
+      "total_leads": 205070.0,
+      "never_called": 104.0,
+      "called_before": 204966.0,
+      "max_called_count": 204.0,
+      "avg_called_count": 82.3589
+    },
+    {
+      "list_id": 193.0,
+      "list_name": "BUSINESS FIX PROV NAPOLI",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV NAPOLI",
+      "total_leads": 187906.0,
+      "never_called": 9888.0,
+      "called_before": 178018.0,
+      "max_called_count": 202.0,
+      "avg_called_count": 81.3024
+    },
+    {
+      "list_id": 412.0,
+      "list_name": "BUSINESS MOBILE NO ADDRESS 2",
+      "active": "Y",
+      "list_description": "BUSINESS MOBILE NO ADDRESS 2",
+      "total_leads": 179700.0,
+      "never_called": 133.0,
+      "called_before": 179567.0,
+      "max_called_count": 107.0,
+      "avg_called_count": 60.3214
+    },
+    {
+      "list_id": 411.0,
+      "list_name": "BUSINESS MOBILE NO ADDRESS 1",
+      "active": "Y",
+      "list_description": "BUSINESS MOBILE NO ADDRESS 1",
+      "total_leads": 168066.0,
+      "never_called": 216.0,
+      "called_before": 167850.0,
+      "max_called_count": 154.0,
+      "avg_called_count": 91.0045
+    },
+    {
+      "list_id": 402.0,
+      "list_name": "BUSINESS MOBILE MIX TEST2",
+      "active": "Y",
+      "list_description": "BUSINESS MOBILE MIX TEST2",
+      "total_leads": 124321.0,
+      "never_called": 0.0,
+      "called_before": 124321.0,
+      "max_called_count": 240.0,
+      "avg_called_count": 110.5833
+    },
+    {
+      "list_id": 416.0,
+      "list_name": "MOBILE NEW 2025 - CYLEX2",
+      "active": "Y",
+      "list_description": "MOBILE NEW 2025 - CYLEX2",
+      "total_leads": 113531.0,
+      "never_called": 1356.0,
+      "called_before": 112175.0,
+      "max_called_count": 46.0,
+      "avg_called_count": 30.3459
+    },
+    {
+      "list_id": 415.0,
+      "list_name": "FIX NEW 2025 - CYLEX2",
+      "active": "Y",
+      "list_description": "FIX NEW 2025 - CYLEX2",
+      "total_leads": 99798.0,
+      "never_called": 33.0,
+      "called_before": 99765.0,
+      "max_called_count": 41.0,
+      "avg_called_count": 13.2039
+    },
+    {
+      "list_id": 414.0,
+      "list_name": "MOBILE NEW 2025 - GMAPS",
+      "active": "Y",
+      "list_description": "MOBILE NEW 2025 - GMAPS",
+      "total_leads": 92555.0,
+      "never_called": 438.0,
+      "called_before": 92117.0,
+      "max_called_count": 105.0,
+      "avg_called_count": 69.7976
+    },
+    {
+      "list_id": 119.0,
+      "list_name": "BUSINESS FIX PROV BARI",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV BARI",
+      "total_leads": 89029.0,
+      "never_called": 3137.0,
+      "called_before": 85892.0,
+      "max_called_count": 114.0,
+      "avg_called_count": 50.0152
+    },
+    {
+      "list_id": 417.0,
+      "list_name": "FIX NEW 2025 - CYLEX3",
+      "active": "Y",
+      "list_description": "FIX NEW 2025 - CYLEX3",
+      "total_leads": 60941.0,
+      "never_called": 16.0,
+      "called_before": 60925.0,
+      "max_called_count": 18.0,
+      "avg_called_count": 5.163
+    },
+    {
+      "list_id": 413.0,
+      "list_name": "FIX NEW 2025 - GMAPS",
+      "active": "Y",
+      "list_description": "FIX NEW 2025 - GMAPS",
+      "total_leads": 60081.0,
+      "never_called": 472.0,
+      "called_before": 59609.0,
+      "max_called_count": 103.0,
+      "avg_called_count": 62.5955
+    },
+    {
+      "list_id": 418.0,
+      "list_name": "MOBILE NEW 2025 - CYLEX3",
+      "active": "Y",
+      "list_description": "MOBILE NEW 2025 - CYLEX3",
+      "total_leads": 57318.0,
+      "never_called": 577.0,
+      "called_before": 56741.0,
+      "max_called_count": 21.0,
+      "avg_called_count": 11.6946
+    },
+    {
+      "list_id": 141.0,
+      "list_name": "BUSINESS FIX PROV LECCE",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV LECCE",
+      "total_leads": 51758.0,
+      "never_called": 2060.0,
+      "called_before": 49698.0,
+      "max_called_count": 117.0,
+      "avg_called_count": 45.7583
+    },
+    {
+      "list_id": 110.0,
+      "list_name": "BUSINESS FIX PROV TRENTO",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV TRENTO",
+      "total_leads": 50804.0,
+      "never_called": 303.0,
+      "called_before": 50501.0,
+      "max_called_count": 56.0,
+      "avg_called_count": 17.7442
+    },
+    {
+      "list_id": 124.0,
+      "list_name": "BUSINESS FIX PROV CATANIA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV CATANIA",
+      "total_leads": 47416.0,
+      "never_called": 1638.0,
+      "called_before": 45778.0,
+      "max_called_count": 130.0,
+      "avg_called_count": 74.1141
+    },
+    {
+      "list_id": 133.0,
+      "list_name": "BUSINESS FIX PROV R.CALABRIA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV R.CALABRIA",
+      "total_leads": 34354.0,
+      "never_called": 2279.0,
+      "called_before": 32075.0,
+      "max_called_count": 115.0,
+      "avg_called_count": 43.0232
+    },
+    {
+      "list_id": 120.0,
+      "list_name": "BUSINESS FIX PROV SIENA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV SIENA",
+      "total_leads": 31256.0,
+      "never_called": 1117.0,
+      "called_before": 30139.0,
+      "max_called_count": 69.0,
+      "avg_called_count": 28.6493
+    },
+    {
+      "list_id": 147.0,
+      "list_name": "BUSINESS FIX PROV CASERTA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV CASERTA",
+      "total_leads": 29024.0,
+      "never_called": 783.0,
+      "called_before": 28241.0,
+      "max_called_count": 198.0,
+      "avg_called_count": 131.2506
+    },
+    {
+      "list_id": 107.0,
+      "list_name": "BUSINESS FIX PROV POTENZA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV POTENZA",
+      "total_leads": 27385.0,
+      "never_called": 1182.0,
+      "called_before": 26203.0,
+      "max_called_count": 140.0,
+      "avg_called_count": 56.372
+    },
+    {
+      "list_id": 106.0,
+      "list_name": "BUSINESS FIX PROV COSENZA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV COSENZA",
+      "total_leads": 23602.0,
+      "never_called": 1209.0,
+      "called_before": 22393.0,
+      "max_called_count": 184.0,
+      "avg_called_count": 118.1311
+    },
+    {
+      "list_id": 118.0,
+      "list_name": "BUSINESS FIX PROV GROSSETO",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV GROSSETO",
+      "total_leads": 22304.0,
+      "never_called": 805.0,
+      "called_before": 21499.0,
+      "max_called_count": 109.0,
+      "avg_called_count": 42.632
+    },
+    {
+      "list_id": 140.0,
+      "list_name": "BUSINESS FIX PROV AVELLINO",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV AVELLINO",
+      "total_leads": 14772.0,
+      "never_called": 530.0,
+      "called_before": 14242.0,
+      "max_called_count": 153.0,
+      "avg_called_count": 104.019
+    },
+    {
+      "list_id": 113.0,
+      "list_name": "BUSINESS FIX PROV LAQUILA",
+      "active": "Y",
+      "list_description": "BUSINESS FIX PROV LAQUILA",
+      "total_leads": 13740.0,
+      "never_called": 888.0,
+      "called_before": 12852.0,
+      "max_called_count": 95.0,
+      "avg_called_count": 61.6822
+    }
+  ],
+  "status_distribution": [
+    {
+      "status": "NA",
+      "count": 1081125.0,
+      "percentage": 35.28,
+      "avg_duration_sec": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "status": "AA",
+      "count": 675786.0,
+      "percentage": 22.05,
+      "avg_duration_sec": 0.4,
+      "total_minutes": 4315.92
+    },
+    {
+      "status": "AB",
+      "count": 654507.0,
+      "percentage": 21.36,
+      "avg_duration_sec": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "status": "PU",
+      "count": 535418.0,
+      "percentage": 17.47,
+      "avg_duration_sec": 5.0,
+      "total_minutes": 44994.18
+    },
+    {
+      "status": "SVYCLM",
+      "count": 78715.0,
+      "percentage": 2.57,
+      "avg_duration_sec": 65.3,
+      "total_minutes": 85730.52
+    },
+    {
+      "status": "PDROP",
+      "count": 37169.0,
+      "percentage": 1.21,
+      "avg_duration_sec": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "status": "ADC",
+      "count": 1628.0,
+      "percentage": 0.05,
+      "avg_duration_sec": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "status": "B",
+      "count": 300.0,
+      "percentage": 0.01,
+      "avg_duration_sec": 0.0,
+      "total_minutes": 0.0
+    }
+  ],
+  "hourly_performance": [
+    {
+      "hour": 9.0,
+      "total_calls": 397692.0,
+      "avg_duration": 2.8,
+      "total_minutes": 18558.2
+    },
+    {
+      "hour": 10.0,
+      "total_calls": 424203.0,
+      "avg_duration": 2.5,
+      "total_minutes": 17453.55
+    },
+    {
+      "hour": 11.0,
+      "total_calls": 402564.0,
+      "avg_duration": 2.5,
+      "total_minutes": 16731.37
+    },
+    {
+      "hour": 12.0,
+      "total_calls": 406033.0,
+      "avg_duration": 2.7,
+      "total_minutes": 18556.33
+    },
+    {
+      "hour": 13.0,
+      "total_calls": 843.0,
+      "avg_duration": 2.3,
+      "total_minutes": 31.9
+    },
+    {
+      "hour": 14.0,
+      "total_calls": 322298.0,
+      "avg_duration": 2.5,
+      "total_minutes": 13576.58
+    },
+    {
+      "hour": 15.0,
+      "total_calls": 396746.0,
+      "avg_duration": 2.6,
+      "total_minutes": 16980.8
+    },
+    {
+      "hour": 16.0,
+      "total_calls": 340927.0,
+      "avg_duration": 2.8,
+      "total_minutes": 16030.5
+    },
+    {
+      "hour": 17.0,
+      "total_calls": 363004.0,
+      "avg_duration": 2.8,
+      "total_minutes": 16692.1
+    },
+    {
+      "hour": 18.0,
+      "total_calls": 9695.0,
+      "avg_duration": 2.6,
+      "total_minutes": 421.72
+    }
+  ],
+  "daily_performance": [
+    {
+      "date": "2025-10-14",
+      "day_name": "Tuesday",
+      "total_calls": 17113.0,
+      "total_minutes": 843.07,
+      "est_cost_fix": 2.7,
+      "est_cost_mobile": 8.85
+    },
+    {
+      "date": "2025-10-13",
+      "day_name": "Monday",
+      "total_calls": 565184.0,
+      "total_minutes": 28893.5,
+      "est_cost_fix": 92.46,
+      "est_cost_mobile": 303.38
+    },
+    {
+      "date": "2025-10-10",
+      "day_name": "Friday",
+      "total_calls": 554495.0,
+      "total_minutes": 27203.97,
+      "est_cost_fix": 87.05,
+      "est_cost_mobile": 285.64
+    },
+    {
+      "date": "2025-10-09",
+      "day_name": "Thursday",
+      "total_calls": 617968.0,
+      "total_minutes": 26661.18,
+      "est_cost_fix": 85.32,
+      "est_cost_mobile": 279.94
+    },
+    {
+      "date": "2025-10-08",
+      "day_name": "Wednesday",
+      "total_calls": 655407.0,
+      "total_minutes": 32663.87,
+      "est_cost_fix": 104.52,
+      "est_cost_mobile": 342.97
+    },
+    {
+      "date": "2025-10-07",
+      "day_name": "Tuesday",
+      "total_calls": 677536.0,
+      "total_minutes": 19465.48,
+      "est_cost_fix": 62.29,
+      "est_cost_mobile": 204.39
+    },
+    {
+      "date": "2025-10-06",
+      "day_name": "Monday",
+      "total_calls": 579230.0,
+      "total_minutes": 26145.37,
+      "est_cost_fix": 83.67,
+      "est_cost_mobile": 274.53
+    },
+    {
+      "date": "2025-10-03",
+      "day_name": "Friday",
+      "total_calls": 653245.0,
+      "total_minutes": 32673.32,
+      "est_cost_fix": 104.55,
+      "est_cost_mobile": 343.07
+    },
+    {
+      "date": "2025-10-02",
+      "day_name": "Thursday",
+      "total_calls": 532474.0,
+      "total_minutes": 29098.55,
+      "est_cost_fix": 93.12,
+      "est_cost_mobile": 305.53
+    },
+    {
+      "date": "2025-10-01",
+      "day_name": "Wednesday",
+      "total_calls": 576665.0,
+      "total_minutes": 30024.0,
+      "est_cost_fix": 96.08,
+      "est_cost_mobile": 315.25
+    },
+    {
+      "date": "2025-09-30",
+      "day_name": "Tuesday",
+      "total_calls": 628663.0,
+      "total_minutes": 32237.95,
+      "est_cost_fix": 103.16,
+      "est_cost_mobile": 338.5
+    },
+    {
+      "date": "2025-09-29",
+      "day_name": "Monday",
+      "total_calls": 591939.0,
+      "total_minutes": 29978.65,
+      "est_cost_fix": 95.93,
+      "est_cost_mobile": 314.78
+    },
+    {
+      "date": "2025-09-26",
+      "day_name": "Friday",
+      "total_calls": 602213.0,
+      "total_minutes": 33971.7,
+      "est_cost_fix": 108.71,
+      "est_cost_mobile": 356.7
+    },
+    {
+      "date": "2025-09-25",
+      "day_name": "Thursday",
+      "total_calls": 631101.0,
+      "total_minutes": 33923.25,
+      "est_cost_fix": 108.55,
+      "est_cost_mobile": 356.19
+    },
+    {
+      "date": "2025-09-24",
+      "day_name": "Wednesday",
+      "total_calls": 630432.0,
+      "total_minutes": 32899.98,
+      "est_cost_fix": 105.28,
+      "est_cost_mobile": 345.45
+    },
+    {
+      "date": "2025-09-23",
+      "day_name": "Tuesday",
+      "total_calls": 626765.0,
+      "total_minutes": 34370.93,
+      "est_cost_fix": 109.99,
+      "est_cost_mobile": 360.89
+    },
+    {
+      "date": "2025-09-22",
+      "day_name": "Monday",
+      "total_calls": 670826.0,
+      "total_minutes": 34589.33,
+      "est_cost_fix": 110.69,
+      "est_cost_mobile": 363.19
+    },
+    {
+      "date": "2025-09-19",
+      "day_name": "Friday",
+      "total_calls": 672240.0,
+      "total_minutes": 39446.0,
+      "est_cost_fix": 126.23,
+      "est_cost_mobile": 414.18
+    },
+    {
+      "date": "2025-09-17",
+      "day_name": "Wednesday",
+      "total_calls": 675956.0,
+      "total_minutes": 39769.17,
+      "est_cost_fix": 127.26,
+      "est_cost_mobile": 417.58
+    },
+    {
+      "date": "2025-09-16",
+      "day_name": "Tuesday",
+      "total_calls": 712727.0,
+      "total_minutes": 41281.45,
+      "est_cost_fix": 132.1,
+      "est_cost_mobile": 433.46
+    },
+    {
+      "date": "2025-09-15",
+      "day_name": "Monday",
+      "total_calls": 677874.0,
+      "total_minutes": 35531.27,
+      "est_cost_fix": 113.7,
+      "est_cost_mobile": 373.08
+    }
+  ],
+  "prefix_analysis": [
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0818",
+      "calls": 73564.0,
+      "avg_duration": 4.4,
+      "total_minutes": 5454.4
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0815",
+      "calls": 62788.0,
+      "avg_duration": 4.6,
+      "total_minutes": 4806.63
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "prefix_4": "0823",
+      "calls": 46800.0,
+      "avg_duration": 4.5,
+      "total_minutes": 3534.08
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3356",
+      "calls": 42078.0,
+      "avg_duration": 1.6,
+      "total_minutes": 1138.5
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "prefix_4": "0577",
+      "calls": 38208.0,
+      "avg_duration": 5.3,
+      "total_minutes": 3400.62
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0805",
+      "calls": 37570.0,
+      "avg_duration": 5.0,
+      "total_minutes": 3125.55
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "prefix_4": "0461",
+      "calls": 33815.0,
+      "avg_duration": 5.9,
+      "total_minutes": 3317.75
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0817",
+      "calls": 32245.0,
+      "avg_duration": 4.5,
+      "total_minutes": 2421.33
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0803",
+      "calls": 30923.0,
+      "avg_duration": 4.8,
+      "total_minutes": 2456.97
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "prefix_4": "0832",
+      "calls": 30424.0,
+      "avg_duration": 4.1,
+      "total_minutes": 2081.73
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3355",
+      "calls": 28229.0,
+      "avg_duration": 1.6,
+      "total_minutes": 766.08
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3357",
+      "calls": 27883.0,
+      "avg_duration": 1.6,
+      "total_minutes": 724.15
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0957",
+      "calls": 27527.0,
+      "avg_duration": 3.8,
+      "total_minutes": 1759.63
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0804",
+      "calls": 27264.0,
+      "avg_duration": 5.0,
+      "total_minutes": 2254.88
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "prefix_4": "0833",
+      "calls": 25233.0,
+      "avg_duration": 4.3,
+      "total_minutes": 1803.45
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0811",
+      "calls": 25188.0,
+      "avg_duration": 3.9,
+      "total_minutes": 1632.83
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "prefix_4": "0984",
+      "calls": 24533.0,
+      "avg_duration": 4.6,
+      "total_minutes": 1872.53
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "prefix_4": "0564",
+      "calls": 24392.0,
+      "avg_duration": 5.1,
+      "total_minutes": 2064.47
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "prefix_4": "0825",
+      "calls": 23489.0,
+      "avg_duration": 4.9,
+      "total_minutes": 1904.68
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "prefix_4": "0965",
+      "calls": 21094.0,
+      "avg_duration": 4.4,
+      "total_minutes": 1543.6
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3384",
+      "calls": 20851.0,
+      "avg_duration": 1.4,
+      "total_minutes": 496.83
+    },
+    {
+      "prefix_2": "39",
+      "prefix_3": "393",
+      "prefix_4": "3939",
+      "calls": 20025.0,
+      "avg_duration": 1.4,
+      "total_minutes": 466.95
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3388",
+      "calls": 19790.0,
+      "avg_duration": 1.5,
+      "total_minutes": 486.98
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3286",
+      "calls": 19717.0,
+      "avg_duration": 1.6,
+      "total_minutes": 509.53
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3483",
+      "calls": 19456.0,
+      "avg_duration": 1.5,
+      "total_minutes": 501.8
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3476",
+      "calls": 19147.0,
+      "avg_duration": 1.4,
+      "total_minutes": 451.48
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3383",
+      "calls": 18966.0,
+      "avg_duration": 1.4,
+      "total_minutes": 455.58
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3288",
+      "calls": 18868.0,
+      "avg_duration": 1.5,
+      "total_minutes": 469.0
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3474",
+      "calls": 18781.0,
+      "avg_duration": 1.4,
+      "total_minutes": 430.57
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3382",
+      "calls": 18722.0,
+      "avg_duration": 1.4,
+      "total_minutes": 436.68
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "prefix_4": "0464",
+      "calls": 18690.0,
+      "avg_duration": 5.4,
+      "total_minutes": 1670.2
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3358",
+      "calls": 18665.0,
+      "avg_duration": 1.6,
+      "total_minutes": 482.62
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3487",
+      "calls": 18565.0,
+      "avg_duration": 1.4,
+      "total_minutes": 435.65
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3477",
+      "calls": 18517.0,
+      "avg_duration": 1.4,
+      "total_minutes": 423.0
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3389",
+      "calls": 18505.0,
+      "avg_duration": 1.5,
+      "total_minutes": 448.98
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3473",
+      "calls": 18116.0,
+      "avg_duration": 1.3,
+      "total_minutes": 378.53
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3475",
+      "calls": 18011.0,
+      "avg_duration": 1.4,
+      "total_minutes": 426.8
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3392",
+      "calls": 18000.0,
+      "avg_duration": 1.5,
+      "total_minutes": 435.37
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3478",
+      "calls": 17633.0,
+      "avg_duration": 1.3,
+      "total_minutes": 373.07
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3482",
+      "calls": 17417.0,
+      "avg_duration": 1.4,
+      "total_minutes": 413.33
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3471",
+      "calls": 17155.0,
+      "avg_duration": 1.3,
+      "total_minutes": 373.23
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3287",
+      "calls": 17143.0,
+      "avg_duration": 1.5,
+      "total_minutes": 415.45
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3387",
+      "calls": 17135.0,
+      "avg_duration": 1.4,
+      "total_minutes": 407.38
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3393",
+      "calls": 17090.0,
+      "avg_duration": 1.5,
+      "total_minutes": 435.53
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "prefix_4": "0971",
+      "calls": 16887.0,
+      "avg_duration": 5.5,
+      "total_minutes": 1535.17
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3289",
+      "calls": 16857.0,
+      "avg_duration": 1.5,
+      "total_minutes": 420.85
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3391",
+      "calls": 16418.0,
+      "avg_duration": 1.4,
+      "total_minutes": 381.18
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3472",
+      "calls": 16402.0,
+      "avg_duration": 1.3,
+      "total_minutes": 365.07
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "prefix_4": "0836",
+      "calls": 16090.0,
+      "avg_duration": 4.7,
+      "total_minutes": 1270.0
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3394",
+      "calls": 16009.0,
+      "avg_duration": 1.4,
+      "total_minutes": 383.65
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3479",
+      "calls": 15489.0,
+      "avg_duration": 1.4,
+      "total_minutes": 362.3
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "347",
+      "prefix_4": "3470",
+      "calls": 15253.0,
+      "avg_duration": 1.4,
+      "total_minutes": 354.1
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0812",
+      "calls": 15168.0,
+      "avg_duration": 3.9,
+      "total_minutes": 995.22
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3351",
+      "calls": 15153.0,
+      "avg_duration": 1.5,
+      "total_minutes": 366.42
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3332",
+      "calls": 14934.0,
+      "avg_duration": 1.3,
+      "total_minutes": 329.28
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3397",
+      "calls": 14859.0,
+      "avg_duration": 1.5,
+      "total_minutes": 372.65
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3396",
+      "calls": 14578.0,
+      "avg_duration": 1.4,
+      "total_minutes": 347.52
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3381",
+      "calls": 14478.0,
+      "avg_duration": 1.4,
+      "total_minutes": 327.88
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3488",
+      "calls": 14476.0,
+      "avg_duration": 1.4,
+      "total_minutes": 334.73
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3398",
+      "calls": 14354.0,
+      "avg_duration": 1.3,
+      "total_minutes": 316.45
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3333",
+      "calls": 14293.0,
+      "avg_duration": 1.3,
+      "total_minutes": 306.23
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3386",
+      "calls": 14224.0,
+      "avg_duration": 1.3,
+      "total_minutes": 311.8
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3334",
+      "calls": 14133.0,
+      "avg_duration": 1.2,
+      "total_minutes": 288.7
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "338",
+      "prefix_4": "3385",
+      "calls": 14100.0,
+      "avg_duration": 1.4,
+      "total_minutes": 318.23
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3284",
+      "calls": 13543.0,
+      "avg_duration": 1.5,
+      "total_minutes": 338.45
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "prefix_4": "0966",
+      "calls": 13494.0,
+      "avg_duration": 4.8,
+      "total_minutes": 1085.05
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3484",
+      "calls": 13252.0,
+      "avg_duration": 1.4,
+      "total_minutes": 312.52
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3495",
+      "calls": 12824.0,
+      "avg_duration": 1.3,
+      "total_minutes": 270.55
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3403",
+      "calls": 12787.0,
+      "avg_duration": 1.2,
+      "total_minutes": 263.72
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3485",
+      "calls": 12539.0,
+      "avg_duration": 1.5,
+      "total_minutes": 309.82
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3336",
+      "calls": 12446.0,
+      "avg_duration": 1.4,
+      "total_minutes": 281.2
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3290",
+      "calls": 12369.0,
+      "avg_duration": 1.6,
+      "total_minutes": 320.85
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3496",
+      "calls": 12091.0,
+      "avg_duration": 1.4,
+      "total_minutes": 272.27
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3405",
+      "calls": 11988.0,
+      "avg_duration": 1.3,
+      "total_minutes": 258.87
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "prefix_4": "0863",
+      "calls": 11966.0,
+      "avg_duration": 4.6,
+      "total_minutes": 920.0
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3337",
+      "calls": 11889.0,
+      "avg_duration": 1.2,
+      "total_minutes": 247.27
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3402",
+      "calls": 11839.0,
+      "avg_duration": 1.4,
+      "total_minutes": 271.82
+    },
+    {
+      "prefix_2": "39",
+      "prefix_3": "392",
+      "prefix_4": "3929",
+      "calls": 11791.0,
+      "avg_duration": 1.2,
+      "total_minutes": 226.88
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3493",
+      "calls": 11665.0,
+      "avg_duration": 1.3,
+      "total_minutes": 260.65
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "339",
+      "prefix_4": "3395",
+      "calls": 11645.0,
+      "avg_duration": 1.4,
+      "total_minutes": 267.85
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0813",
+      "calls": 11533.0,
+      "avg_duration": 3.1,
+      "total_minutes": 601.98
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3498",
+      "calls": 11432.0,
+      "avg_duration": 1.2,
+      "total_minutes": 236.55
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3492",
+      "calls": 11311.0,
+      "avg_duration": 1.3,
+      "total_minutes": 239.22
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3339",
+      "calls": 11228.0,
+      "avg_duration": 1.4,
+      "total_minutes": 255.12
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3407",
+      "calls": 11165.0,
+      "avg_duration": 1.3,
+      "total_minutes": 239.12
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3494",
+      "calls": 11126.0,
+      "avg_duration": 1.4,
+      "total_minutes": 259.92
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3338",
+      "calls": 11111.0,
+      "avg_duration": 1.1,
+      "total_minutes": 208.45
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0953",
+      "calls": 10828.0,
+      "avg_duration": 4.8,
+      "total_minutes": 871.05
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3497",
+      "calls": 10706.0,
+      "avg_duration": 1.3,
+      "total_minutes": 232.53
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3331",
+      "calls": 10641.0,
+      "avg_duration": 1.2,
+      "total_minutes": 209.55
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3285",
+      "calls": 10568.0,
+      "avg_duration": 1.6,
+      "total_minutes": 276.53
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3480",
+      "calls": 10542.0,
+      "avg_duration": 1.6,
+      "total_minutes": 276.58
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3408",
+      "calls": 10525.0,
+      "avg_duration": 1.3,
+      "total_minutes": 225.95
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "prefix_4": "0862",
+      "calls": 10455.0,
+      "avg_duration": 5.0,
+      "total_minutes": 862.83
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3406",
+      "calls": 10376.0,
+      "avg_duration": 1.4,
+      "total_minutes": 234.83
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3491",
+      "calls": 10358.0,
+      "avg_duration": 1.3,
+      "total_minutes": 224.37
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3486",
+      "calls": 10116.0,
+      "avg_duration": 1.4,
+      "total_minutes": 234.67
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0954",
+      "calls": 9742.0,
+      "avg_duration": 4.3,
+      "total_minutes": 691.3
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3283",
+      "calls": 9634.0,
+      "avg_duration": 1.3,
+      "total_minutes": 210.47
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "prefix_4": "0964",
+      "calls": 9497.0,
+      "avg_duration": 5.5,
+      "total_minutes": 867.12
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "333",
+      "prefix_4": "3335",
+      "calls": 9442.0,
+      "avg_duration": 1.5,
+      "total_minutes": 231.25
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3409",
+      "calls": 9353.0,
+      "avg_duration": 1.2,
+      "total_minutes": 193.42
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0952",
+      "calls": 9327.0,
+      "avg_duration": 2.6,
+      "total_minutes": 409.23
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3282",
+      "calls": 9326.0,
+      "avg_duration": 1.3,
+      "total_minutes": 208.25
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3404",
+      "calls": 9226.0,
+      "avg_duration": 1.2,
+      "total_minutes": 192.03
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0809",
+      "calls": 9104.0,
+      "avg_duration": 4.8,
+      "total_minutes": 722.68
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0814",
+      "calls": 8943.0,
+      "avg_duration": 4.7,
+      "total_minutes": 693.93
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0808",
+      "calls": 8846.0,
+      "avg_duration": 5.2,
+      "total_minutes": 759.23
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3291",
+      "calls": 8833.0,
+      "avg_duration": 1.6,
+      "total_minutes": 228.7
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3281",
+      "calls": 8803.0,
+      "avg_duration": 1.3,
+      "total_minutes": 190.93
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3401",
+      "calls": 8537.0,
+      "avg_duration": 1.5,
+      "total_minutes": 212.55
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3292",
+      "calls": 8529.0,
+      "avg_duration": 1.6,
+      "total_minutes": 229.53
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "334",
+      "prefix_4": "3343",
+      "calls": 8424.0,
+      "avg_duration": 1.3,
+      "total_minutes": 175.65
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3294",
+      "calls": 8402.0,
+      "avg_duration": 1.4,
+      "total_minutes": 195.43
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "328",
+      "prefix_4": "3280",
+      "calls": 8395.0,
+      "avg_duration": 1.3,
+      "total_minutes": 188.08
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "prefix_4": "0463",
+      "calls": 8250.0,
+      "avg_duration": 5.9,
+      "total_minutes": 806.18
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "prefix_4": "0465",
+      "calls": 8220.0,
+      "avg_duration": 4.3,
+      "total_minutes": 588.92
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0810",
+      "calls": 8070.0,
+      "avg_duration": 3.6,
+      "total_minutes": 480.93
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0955",
+      "calls": 8008.0,
+      "avg_duration": 4.4,
+      "total_minutes": 591.55
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "prefix_4": "0981",
+      "calls": 7946.0,
+      "avg_duration": 4.8,
+      "total_minutes": 634.82
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "prefix_4": "0578",
+      "calls": 7932.0,
+      "avg_duration": 5.6,
+      "total_minutes": 740.83
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "prefix_4": "0802",
+      "calls": 7892.0,
+      "avg_duration": 2.0,
+      "total_minutes": 261.77
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "prefix_4": "0972",
+      "calls": 7740.0,
+      "avg_duration": 4.7,
+      "total_minutes": 601.08
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3489",
+      "calls": 7737.0,
+      "avg_duration": 1.4,
+      "total_minutes": 180.83
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "prefix_4": "0983",
+      "calls": 7664.0,
+      "avg_duration": 4.5,
+      "total_minutes": 571.78
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "prefix_4": "0864",
+      "calls": 7588.0,
+      "avg_duration": 4.3,
+      "total_minutes": 547.78
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3296",
+      "calls": 7513.0,
+      "avg_duration": 1.5,
+      "total_minutes": 189.12
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "320",
+      "prefix_4": "3200",
+      "calls": 7380.0,
+      "avg_duration": 1.4,
+      "total_minutes": 178.07
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3293",
+      "calls": 7365.0,
+      "avg_duration": 1.4,
+      "total_minutes": 167.35
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0956",
+      "calls": 7235.0,
+      "avg_duration": 4.5,
+      "total_minutes": 544.7
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "349",
+      "prefix_4": "3490",
+      "calls": 7192.0,
+      "avg_duration": 1.3,
+      "total_minutes": 158.97
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "334",
+      "prefix_4": "3346",
+      "calls": 6935.0,
+      "avg_duration": 1.5,
+      "total_minutes": 171.4
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "prefix_4": "0973",
+      "calls": 6922.0,
+      "avg_duration": 5.6,
+      "total_minutes": 650.0
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "334",
+      "prefix_4": "3341",
+      "calls": 6918.0,
+      "avg_duration": 1.4,
+      "total_minutes": 163.1
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "320",
+      "prefix_4": "3208",
+      "calls": 6680.0,
+      "avg_duration": 1.2,
+      "total_minutes": 137.82
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "334",
+      "prefix_4": "3347",
+      "calls": 6596.0,
+      "avg_duration": 1.2,
+      "total_minutes": 136.32
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "prefix_4": "0933",
+      "calls": 6570.0,
+      "avg_duration": 5.2,
+      "total_minutes": 564.57
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3299",
+      "calls": 6466.0,
+      "avg_duration": 1.7,
+      "total_minutes": 185.9
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "prefix_4": "0959",
+      "calls": 6389.0,
+      "avg_duration": 4.7,
+      "total_minutes": 502.02
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3298",
+      "calls": 6375.0,
+      "avg_duration": 1.5,
+      "total_minutes": 163.78
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "335",
+      "prefix_4": "3352",
+      "calls": 6365.0,
+      "avg_duration": 1.7,
+      "total_minutes": 180.5
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0819",
+      "calls": 6324.0,
+      "avg_duration": 3.3,
+      "total_minutes": 349.08
+    },
+    {
+      "prefix_2": "33",
+      "prefix_3": "331",
+      "prefix_4": "3313",
+      "calls": 6298.0,
+      "avg_duration": 1.2,
+      "total_minutes": 122.6
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "348",
+      "prefix_4": "3481",
+      "calls": 6253.0,
+      "avg_duration": 1.5,
+      "total_minutes": 152.33
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "prefix_4": "0462",
+      "calls": 6250.0,
+      "avg_duration": 5.6,
+      "total_minutes": 579.67
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "prefix_4": "0816",
+      "calls": 6114.0,
+      "avg_duration": 3.8,
+      "total_minutes": 386.48
+    },
+    {
+      "prefix_2": "32",
+      "prefix_3": "329",
+      "prefix_4": "3297",
+      "calls": 6107.0,
+      "avg_duration": 1.4,
+      "total_minutes": 138.7
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "340",
+      "prefix_4": "3400",
+      "calls": 6085.0,
+      "avg_duration": 1.3,
+      "total_minutes": 134.43
+    },
+    {
+      "prefix_2": "34",
+      "prefix_3": "346",
+      "prefix_4": "3463",
+      "calls": 6075.0,
+      "avg_duration": 1.4,
+      "total_minutes": 138.28
+    },
+    {
+      "prefix_2": "39",
+      "prefix_3": "393",
+      "prefix_4": "3938",
+      "calls": 6070.0,
+      "avg_duration": 1.0,
+      "total_minutes": 102.17
+    }
+  ],
+  "list_performance": [
+    {
+      "list_id": 411.0,
+      "calls": 433576.0,
+      "avg_duration": 1.4,
+      "total_minutes": 10156.12,
+      "unique_leads": 106188.0,
+      "unique_phones": 106188.0
+    },
+    {
+      "list_id": 404.0,
+      "calls": 419299.0,
+      "avg_duration": 1.3,
+      "total_minutes": 8971.47,
+      "unique_leads": 108028.0,
+      "unique_phones": 108028.0
+    },
+    {
+      "list_id": 416.0,
+      "calls": 299867.0,
+      "avg_duration": 1.3,
+      "total_minutes": 6672.45,
+      "unique_leads": 99665.0,
+      "unique_phones": 99665.0
+    },
+    {
+      "list_id": 193.0,
+      "calls": 215381.0,
+      "avg_duration": 4.3,
+      "total_minutes": 15428.8,
+      "unique_leads": 72046.0,
+      "unique_phones": 72046.0
+    },
+    {
+      "list_id": 402.0,
+      "calls": 206688.0,
+      "avg_duration": 1.2,
+      "total_minutes": 4295.65,
+      "unique_leads": 72851.0,
+      "unique_phones": 72851.0
+    },
+    {
+      "list_id": 412.0,
+      "calls": 200996.0,
+      "avg_duration": 1.7,
+      "total_minutes": 5800.72,
+      "unique_leads": 101299.0,
+      "unique_phones": 101299.0
+    },
+    {
+      "list_id": 414.0,
+      "calls": 195964.0,
+      "avg_duration": 1.4,
+      "total_minutes": 4713.25,
+      "unique_leads": 65780.0,
+      "unique_phones": 65780.0
+    },
+    {
+      "list_id": 119.0,
+      "calls": 130011.0,
+      "avg_duration": 4.8,
+      "total_minutes": 10347.15,
+      "unique_leads": 44165.0,
+      "unique_phones": 44165.0
+    },
+    {
+      "list_id": 418.0,
+      "calls": 129310.0,
+      "avg_duration": 1.6,
+      "total_minutes": 3426.35,
+      "unique_leads": 51464.0,
+      "unique_phones": 51464.0
+    },
+    {
+      "list_id": 413.0,
+      "calls": 117785.0,
+      "avg_duration": 5.1,
+      "total_minutes": 10019.2,
+      "unique_leads": 39433.0,
+      "unique_phones": 39433.0
+    },
+    {
+      "list_id": 415.0,
+      "calls": 103425.0,
+      "avg_duration": 4.1,
+      "total_minutes": 6996.37,
+      "unique_leads": 33420.0,
+      "unique_phones": 33420.0
+    },
+    {
+      "list_id": 124.0,
+      "calls": 89672.0,
+      "avg_duration": 4.2,
+      "total_minutes": 6252.83,
+      "unique_leads": 30236.0,
+      "unique_phones": 30236.0
+    },
+    {
+      "list_id": 110.0,
+      "calls": 75717.0,
+      "avg_duration": 5.6,
+      "total_minutes": 7079.05,
+      "unique_leads": 29374.0,
+      "unique_phones": 29374.0
+    },
+    {
+      "list_id": 141.0,
+      "calls": 69798.0,
+      "avg_duration": 4.3,
+      "total_minutes": 5007.63,
+      "unique_leads": 23227.0,
+      "unique_phones": 23227.0
+    },
+    {
+      "list_id": 147.0,
+      "calls": 60530.0,
+      "avg_duration": 4.5,
+      "total_minutes": 4494.25,
+      "unique_leads": 20235.0,
+      "unique_phones": 20235.0
+    },
+    {
+      "list_id": 417.0,
+      "calls": 54413.0,
+      "avg_duration": 4.2,
+      "total_minutes": 3838.95,
+      "unique_leads": 21304.0,
+      "unique_phones": 21304.0
+    },
+    {
+      "list_id": 106.0,
+      "calls": 47221.0,
+      "avg_duration": 4.5,
+      "total_minutes": 3530.65,
+      "unique_leads": 15956.0,
+      "unique_phones": 15956.0
+    },
+    {
+      "list_id": 120.0,
+      "calls": 45114.0,
+      "avg_duration": 5.4,
+      "total_minutes": 4047.02,
+      "unique_leads": 15329.0,
+      "unique_phones": 15329.0
+    },
+    {
+      "list_id": 133.0,
+      "calls": 42786.0,
+      "avg_duration": 4.8,
+      "total_minutes": 3397.83,
+      "unique_leads": 14492.0,
+      "unique_phones": 14492.0
+    },
+    {
+      "list_id": 107.0,
+      "calls": 35549.0,
+      "avg_duration": 5.3,
+      "total_minutes": 3165.78,
+      "unique_leads": 12129.0,
+      "unique_phones": 12129.0
+    },
+    {
+      "list_id": 140.0,
+      "calls": 30951.0,
+      "avg_duration": 5.2,
+      "total_minutes": 2691.0,
+      "unique_leads": 10646.0,
+      "unique_phones": 10646.0
+    },
+    {
+      "list_id": 118.0,
+      "calls": 29437.0,
+      "avg_duration": 4.9,
+      "total_minutes": 2423.33,
+      "unique_leads": 10048.0,
+      "unique_phones": 10048.0
+    },
+    {
+      "list_id": 113.0,
+      "calls": 29223.0,
+      "avg_duration": 4.6,
+      "total_minutes": 2260.88,
+      "unique_leads": 9867.0,
+      "unique_phones": 9867.0
+    }
+  ],
+  "recycling_status": [
+    {
+      "status": "AA",
+      "called_count": 240.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 240.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 239.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 239.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "PU",
+      "called_count": 238.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 237.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "B",
+      "called_count": 237.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 237.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "PU",
+      "called_count": 237.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 236.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "NA",
+      "called_count": 236.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "AA",
+      "called_count": 235.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 235.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 234.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "B",
+      "called_count": 234.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 234.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "PU",
+      "called_count": 234.0,
+      "leads_count": 5.0
+    },
+    {
+      "status": "AA",
+      "called_count": 233.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "B",
+      "called_count": 233.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "NA",
+      "called_count": 233.0,
+      "leads_count": 7.0
+    },
+    {
+      "status": "PU",
+      "called_count": 233.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "AA",
+      "called_count": 232.0,
+      "leads_count": 5.0
+    },
+    {
+      "status": "B",
+      "called_count": 232.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 232.0,
+      "leads_count": 8.0
+    },
+    {
+      "status": "PU",
+      "called_count": 232.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "AA",
+      "called_count": 231.0,
+      "leads_count": 6.0
+    },
+    {
+      "status": "B",
+      "called_count": 231.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "NA",
+      "called_count": 231.0,
+      "leads_count": 9.0
+    },
+    {
+      "status": "PU",
+      "called_count": 231.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "AA",
+      "called_count": 230.0,
+      "leads_count": 9.0
+    },
+    {
+      "status": "B",
+      "called_count": 230.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "NA",
+      "called_count": 230.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "PU",
+      "called_count": 230.0,
+      "leads_count": 6.0
+    },
+    {
+      "status": "AA",
+      "called_count": 229.0,
+      "leads_count": 5.0
+    },
+    {
+      "status": "B",
+      "called_count": 229.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "NA",
+      "called_count": 229.0,
+      "leads_count": 11.0
+    },
+    {
+      "status": "PU",
+      "called_count": 229.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "SVYCLM",
+      "called_count": 229.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 228.0,
+      "leads_count": 7.0
+    },
+    {
+      "status": "B",
+      "called_count": 228.0,
+      "leads_count": 3.0
+    },
+    {
+      "status": "NA",
+      "called_count": 228.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "PU",
+      "called_count": 228.0,
+      "leads_count": 8.0
+    },
+    {
+      "status": "AA",
+      "called_count": 227.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "ADC",
+      "called_count": 227.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 227.0,
+      "leads_count": 7.0
+    },
+    {
+      "status": "NA",
+      "called_count": 227.0,
+      "leads_count": 16.0
+    },
+    {
+      "status": "PU",
+      "called_count": 227.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "AA",
+      "called_count": 226.0,
+      "leads_count": 19.0
+    },
+    {
+      "status": "ADC",
+      "called_count": 226.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 226.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "NA",
+      "called_count": 226.0,
+      "leads_count": 11.0
+    },
+    {
+      "status": "PDROP",
+      "called_count": 226.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "PU",
+      "called_count": 226.0,
+      "leads_count": 6.0
+    },
+    {
+      "status": "AA",
+      "called_count": 225.0,
+      "leads_count": 15.0
+    },
+    {
+      "status": "B",
+      "called_count": 225.0,
+      "leads_count": 6.0
+    },
+    {
+      "status": "NA",
+      "called_count": 225.0,
+      "leads_count": 16.0
+    },
+    {
+      "status": "PDROP",
+      "called_count": 225.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "PU",
+      "called_count": 225.0,
+      "leads_count": 12.0
+    },
+    {
+      "status": "AA",
+      "called_count": 224.0,
+      "leads_count": 12.0
+    },
+    {
+      "status": "ADC",
+      "called_count": 224.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 224.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "DNCC",
+      "called_count": 224.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "NA",
+      "called_count": 224.0,
+      "leads_count": 15.0
+    },
+    {
+      "status": "PDROP",
+      "called_count": 224.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "PU",
+      "called_count": 224.0,
+      "leads_count": 11.0
+    },
+    {
+      "status": "SVYCLM",
+      "called_count": 224.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 223.0,
+      "leads_count": 12.0
+    },
+    {
+      "status": "B",
+      "called_count": 223.0,
+      "leads_count": 7.0
+    },
+    {
+      "status": "NA",
+      "called_count": 223.0,
+      "leads_count": 21.0
+    },
+    {
+      "status": "PU",
+      "called_count": 223.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "AA",
+      "called_count": 222.0,
+      "leads_count": 17.0
+    },
+    {
+      "status": "B",
+      "called_count": 222.0,
+      "leads_count": 4.0
+    },
+    {
+      "status": "NA",
+      "called_count": 222.0,
+      "leads_count": 13.0
+    },
+    {
+      "status": "PU",
+      "called_count": 222.0,
+      "leads_count": 6.0
+    },
+    {
+      "status": "AA",
+      "called_count": 221.0,
+      "leads_count": 13.0
+    },
+    {
+      "status": "ADC",
+      "called_count": 221.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 221.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "NA",
+      "called_count": 221.0,
+      "leads_count": 20.0
+    },
+    {
+      "status": "PU",
+      "called_count": 221.0,
+      "leads_count": 14.0
+    },
+    {
+      "status": "AA",
+      "called_count": 220.0,
+      "leads_count": 14.0
+    },
+    {
+      "status": "ADC",
+      "called_count": 220.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "B",
+      "called_count": 220.0,
+      "leads_count": 9.0
+    },
+    {
+      "status": "NA",
+      "called_count": 220.0,
+      "leads_count": 21.0
+    },
+    {
+      "status": "PDROP",
+      "called_count": 220.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "PU",
+      "called_count": 220.0,
+      "leads_count": 8.0
+    },
+    {
+      "status": "AA",
+      "called_count": 219.0,
+      "leads_count": 24.0
+    },
+    {
+      "status": "B",
+      "called_count": 219.0,
+      "leads_count": 7.0
+    },
+    {
+      "status": "NA",
+      "called_count": 219.0,
+      "leads_count": 11.0
+    },
+    {
+      "status": "PDROP",
+      "called_count": 219.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "PU",
+      "called_count": 219.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "AA",
+      "called_count": 218.0,
+      "leads_count": 13.0
+    },
+    {
+      "status": "B",
+      "called_count": 218.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "NA",
+      "called_count": 218.0,
+      "leads_count": 10.0
+    },
+    {
+      "status": "PU",
+      "called_count": 218.0,
+      "leads_count": 8.0
+    },
+    {
+      "status": "SVYCLM",
+      "called_count": 218.0,
+      "leads_count": 1.0
+    },
+    {
+      "status": "AA",
+      "called_count": 217.0,
+      "leads_count": 14.0
+    },
+    {
+      "status": "B",
+      "called_count": 217.0,
+      "leads_count": 13.0
+    },
+    {
+      "status": "DNCC",
+      "called_count": 217.0,
+      "leads_count": 2.0
+    },
+    {
+      "status": "NA",
+      "called_count": 217.0,
+      "leads_count": 14.0
+    },
+    {
+      "status": "PU",
+      "called_count": 217.0,
+      "leads_count": 7.0
+    }
+  ],
+  "closer_log": [],
+  "sample_leads": [],
+  "call_time_config": [],
+  "lead_filter_config": [],
+  "lead_filter_rules": [],
+  "hopper_status": [
+    {
+      "list_id": 404.0,
+      "leads_in_hopper": 194.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 416.0,
+      "leads_in_hopper": 192.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 411.0,
+      "leads_in_hopper": 175.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 412.0,
+      "leads_in_hopper": 170.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 402.0,
+      "leads_in_hopper": 145.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 193.0,
+      "leads_in_hopper": 135.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 414.0,
+      "leads_in_hopper": 119.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 418.0,
+      "leads_in_hopper": 97.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 413.0,
+      "leads_in_hopper": 77.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 119.0,
+      "leads_in_hopper": 65.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 124.0,
+      "leads_in_hopper": 60.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 415.0,
+      "leads_in_hopper": 57.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 110.0,
+      "leads_in_hopper": 56.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 141.0,
+      "leads_in_hopper": 52.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 147.0,
+      "leads_in_hopper": 35.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 133.0,
+      "leads_in_hopper": 31.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 106.0,
+      "leads_in_hopper": 29.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 107.0,
+      "leads_in_hopper": 26.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 417.0,
+      "leads_in_hopper": 25.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 118.0,
+      "leads_in_hopper": 23.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 120.0,
+      "leads_in_hopper": 21.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 140.0,
+      "leads_in_hopper": 18.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 113.0,
+      "leads_in_hopper": 13.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "READY",
+      "priority": 0.0
+    },
+    {
+      "list_id": 404.0,
+      "leads_in_hopper": 3.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 416.0,
+      "leads_in_hopper": 3.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 402.0,
+      "leads_in_hopper": 3.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 412.0,
+      "leads_in_hopper": 2.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 415.0,
+      "leads_in_hopper": 2.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 411.0,
+      "leads_in_hopper": 2.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 113.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 120.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 193.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 110.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 106.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 416.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "INCALL",
+      "priority": 0.0
+    },
+    {
+      "list_id": 124.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    },
+    {
+      "list_id": 417.0,
+      "leads_in_hopper": 1.0,
+      "min_gmt": 2.0,
+      "max_gmt": 2.0,
+      "status": "QUEUE",
+      "priority": 0.0
+    }
+  ],
+  "prefix_status_analysis": [
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "NA",
+      "calls": 1226.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "AB",
+      "calls": 704.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "AA",
+      "calls": 673.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.9
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "PU",
+      "calls": 462.0,
+      "avg_duration": 5.9,
+      "total_minutes": 45.47
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "SVYCLM",
+      "calls": 203.0,
+      "avg_duration": 65.7,
+      "total_minutes": 222.45
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "010",
+      "status": "PDROP",
+      "calls": 40.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "NA",
+      "calls": 3137.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "AB",
+      "calls": 1660.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "AA",
+      "calls": 1632.0,
+      "avg_duration": 0.4,
+      "total_minutes": 10.12
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "PU",
+      "calls": 1263.0,
+      "avg_duration": 5.7,
+      "total_minutes": 120.38
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "SVYCLM",
+      "calls": 452.0,
+      "avg_duration": 66.2,
+      "total_minutes": 499.03
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "011",
+      "status": "PDROP",
+      "calls": 77.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "012",
+      "status": "NA",
+      "calls": 308.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "012",
+      "status": "AB",
+      "calls": 184.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "012",
+      "status": "AA",
+      "calls": 140.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "012",
+      "status": "PU",
+      "calls": 122.0,
+      "avg_duration": 5.6,
+      "total_minutes": 11.45
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "012",
+      "status": "SVYCLM",
+      "calls": 41.0,
+      "avg_duration": 61.8,
+      "total_minutes": 42.22
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "013",
+      "status": "NA",
+      "calls": 224.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "013",
+      "status": "AA",
+      "calls": 160.0,
+      "avg_duration": 0.3,
+      "total_minutes": 0.9
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "013",
+      "status": "AB",
+      "calls": 152.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "013",
+      "status": "PU",
+      "calls": 99.0,
+      "avg_duration": 5.6,
+      "total_minutes": 9.27
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "013",
+      "status": "SVYCLM",
+      "calls": 32.0,
+      "avg_duration": 72.3,
+      "total_minutes": 38.55
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "014",
+      "status": "NA",
+      "calls": 353.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "014",
+      "status": "AB",
+      "calls": 242.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "014",
+      "status": "AA",
+      "calls": 203.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.02
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "014",
+      "status": "PU",
+      "calls": 166.0,
+      "avg_duration": 5.7,
+      "total_minutes": 15.7
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "014",
+      "status": "SVYCLM",
+      "calls": 56.0,
+      "avg_duration": 66.4,
+      "total_minutes": 62.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "015",
+      "status": "NA",
+      "calls": 246.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "015",
+      "status": "AB",
+      "calls": 170.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "015",
+      "status": "AA",
+      "calls": 159.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.15
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "015",
+      "status": "PU",
+      "calls": 76.0,
+      "avg_duration": 5.4,
+      "total_minutes": 6.85
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "015",
+      "status": "SVYCLM",
+      "calls": 40.0,
+      "avg_duration": 64.3,
+      "total_minutes": 42.88
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "016",
+      "status": "NA",
+      "calls": 402.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "016",
+      "status": "AA",
+      "calls": 217.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.15
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "016",
+      "status": "PU",
+      "calls": 193.0,
+      "avg_duration": 6.5,
+      "total_minutes": 20.72
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "016",
+      "status": "AB",
+      "calls": 193.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "016",
+      "status": "SVYCLM",
+      "calls": 47.0,
+      "avg_duration": 67.2,
+      "total_minutes": 52.67
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "017",
+      "status": "NA",
+      "calls": 532.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "017",
+      "status": "AB",
+      "calls": 237.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "017",
+      "status": "AA",
+      "calls": 207.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.35
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "017",
+      "status": "PU",
+      "calls": 191.0,
+      "avg_duration": 5.7,
+      "total_minutes": 18.18
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "017",
+      "status": "SVYCLM",
+      "calls": 121.0,
+      "avg_duration": 69.6,
+      "total_minutes": 140.33
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "NA",
+      "calls": 1003.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "AA",
+      "calls": 601.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.95
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "AB",
+      "calls": 481.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "PU",
+      "calls": 481.0,
+      "avg_duration": 5.4,
+      "total_minutes": 43.25
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "SVYCLM",
+      "calls": 159.0,
+      "avg_duration": 66.8,
+      "total_minutes": 176.92
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "018",
+      "status": "PDROP",
+      "calls": 25.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "019",
+      "status": "NA",
+      "calls": 277.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "019",
+      "status": "AA",
+      "calls": 115.0,
+      "avg_duration": 0.4,
+      "total_minutes": 0.8
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "019",
+      "status": "AB",
+      "calls": 107.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "019",
+      "status": "PU",
+      "calls": 85.0,
+      "avg_duration": 5.5,
+      "total_minutes": 7.73
+    },
+    {
+      "prefix_2": "01",
+      "prefix_3": "019",
+      "status": "SVYCLM",
+      "calls": 38.0,
+      "avg_duration": 68.2,
+      "total_minutes": 43.18
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "020",
+      "status": "AA",
+      "calls": 144.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.03
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "020",
+      "status": "AB",
+      "calls": 83.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "020",
+      "status": "PU",
+      "calls": 82.0,
+      "avg_duration": 6.9,
+      "total_minutes": 9.38
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "020",
+      "status": "NA",
+      "calls": 56.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "NA",
+      "calls": 485.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "AA",
+      "calls": 411.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.87
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "AB",
+      "calls": 404.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "PU",
+      "calls": 250.0,
+      "avg_duration": 6.3,
+      "total_minutes": 26.07
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "SVYCLM",
+      "calls": 105.0,
+      "avg_duration": 69.0,
+      "total_minutes": 120.7
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "022",
+      "status": "PDROP",
+      "calls": 53.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "NA",
+      "calls": 1382.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "AA",
+      "calls": 926.0,
+      "avg_duration": 0.4,
+      "total_minutes": 6.33
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "AB",
+      "calls": 779.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "PU",
+      "calls": 598.0,
+      "avg_duration": 6.4,
+      "total_minutes": 63.85
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "SVYCLM",
+      "calls": 287.0,
+      "avg_duration": 65.3,
+      "total_minutes": 312.47
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "023",
+      "status": "PDROP",
+      "calls": 29.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "024",
+      "status": "AA",
+      "calls": 863.0,
+      "avg_duration": 0.4,
+      "total_minutes": 5.52
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "024",
+      "status": "NA",
+      "calls": 829.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "024",
+      "status": "AB",
+      "calls": 625.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "024",
+      "status": "PU",
+      "calls": 406.0,
+      "avg_duration": 6.1,
+      "total_minutes": 41.25
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "024",
+      "status": "SVYCLM",
+      "calls": 226.0,
+      "avg_duration": 65.3,
+      "total_minutes": 246.03
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "025",
+      "status": "NA",
+      "calls": 398.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "025",
+      "status": "AA",
+      "calls": 321.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.4
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "025",
+      "status": "PU",
+      "calls": 252.0,
+      "avg_duration": 6.6,
+      "total_minutes": 27.75
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "025",
+      "status": "AB",
+      "calls": 225.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "025",
+      "status": "SVYCLM",
+      "calls": 85.0,
+      "avg_duration": 67.5,
+      "total_minutes": 95.57
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "026",
+      "status": "NA",
+      "calls": 367.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "026",
+      "status": "AA",
+      "calls": 365.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.67
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "026",
+      "status": "AB",
+      "calls": 299.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "026",
+      "status": "PU",
+      "calls": 259.0,
+      "avg_duration": 5.8,
+      "total_minutes": 25.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "026",
+      "status": "SVYCLM",
+      "calls": 74.0,
+      "avg_duration": 67.4,
+      "total_minutes": 83.12
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "027",
+      "status": "NA",
+      "calls": 311.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "027",
+      "status": "AA",
+      "calls": 299.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.17
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "027",
+      "status": "PU",
+      "calls": 269.0,
+      "avg_duration": 6.3,
+      "total_minutes": 28.22
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "027",
+      "status": "AB",
+      "calls": 255.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "027",
+      "status": "SVYCLM",
+      "calls": 98.0,
+      "avg_duration": 62.4,
+      "total_minutes": 102.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "AA",
+      "calls": 1200.0,
+      "avg_duration": 0.4,
+      "total_minutes": 7.2
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "NA",
+      "calls": 925.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "AB",
+      "calls": 923.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "PU",
+      "calls": 670.0,
+      "avg_duration": 6.4,
+      "total_minutes": 71.13
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "SVYCLM",
+      "calls": 226.0,
+      "avg_duration": 66.8,
+      "total_minutes": 251.68
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "028",
+      "status": "PDROP",
+      "calls": 44.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "NA",
+      "calls": 1165.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "AA",
+      "calls": 741.0,
+      "avg_duration": 0.4,
+      "total_minutes": 5.27
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "AB",
+      "calls": 664.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "PU",
+      "calls": 494.0,
+      "avg_duration": 6.5,
+      "total_minutes": 53.27
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "SVYCLM",
+      "calls": 191.0,
+      "avg_duration": 66.4,
+      "total_minutes": 211.45
+    },
+    {
+      "prefix_2": "02",
+      "prefix_3": "029",
+      "status": "PDROP",
+      "calls": 25.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "NA",
+      "calls": 1234.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "AA",
+      "calls": 710.0,
+      "avg_duration": 0.3,
+      "total_minutes": 3.87
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "AB",
+      "calls": 607.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "PU",
+      "calls": 532.0,
+      "avg_duration": 5.9,
+      "total_minutes": 52.07
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "SVYCLM",
+      "calls": 177.0,
+      "avg_duration": 66.3,
+      "total_minutes": 195.68
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "030",
+      "status": "PDROP",
+      "calls": 50.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "031",
+      "status": "NA",
+      "calls": 732.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "031",
+      "status": "AA",
+      "calls": 365.0,
+      "avg_duration": 0.2,
+      "total_minutes": 1.4
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "031",
+      "status": "PU",
+      "calls": 293.0,
+      "avg_duration": 6.5,
+      "total_minutes": 31.53
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "031",
+      "status": "AB",
+      "calls": 275.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "031",
+      "status": "SVYCLM",
+      "calls": 116.0,
+      "avg_duration": 66.1,
+      "total_minutes": 127.7
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "032",
+      "status": "NA",
+      "calls": 608.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "032",
+      "status": "AB",
+      "calls": 491.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "032",
+      "status": "AA",
+      "calls": 341.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.03
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "032",
+      "status": "PU",
+      "calls": 239.0,
+      "avg_duration": 6.2,
+      "total_minutes": 24.52
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "032",
+      "status": "SVYCLM",
+      "calls": 107.0,
+      "avg_duration": 68.2,
+      "total_minutes": 121.62
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "NA",
+      "calls": 1307.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "AB",
+      "calls": 1133.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "AA",
+      "calls": 793.0,
+      "avg_duration": 0.4,
+      "total_minutes": 5.07
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "PU",
+      "calls": 553.0,
+      "avg_duration": 7.3,
+      "total_minutes": 67.37
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "SVYCLM",
+      "calls": 262.0,
+      "avg_duration": 66.1,
+      "total_minutes": 288.67
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "033",
+      "status": "PDROP",
+      "calls": 24.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "034",
+      "status": "NA",
+      "calls": 1035.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "034",
+      "status": "AB",
+      "calls": 817.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "034",
+      "status": "AA",
+      "calls": 398.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.65
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "034",
+      "status": "PU",
+      "calls": 330.0,
+      "avg_duration": 6.1,
+      "total_minutes": 33.45
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "034",
+      "status": "SVYCLM",
+      "calls": 165.0,
+      "avg_duration": 70.5,
+      "total_minutes": 194.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "NA",
+      "calls": 1581.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "AB",
+      "calls": 873.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "AA",
+      "calls": 763.0,
+      "avg_duration": 0.4,
+      "total_minutes": 4.53
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "PU",
+      "calls": 584.0,
+      "avg_duration": 5.6,
+      "total_minutes": 54.15
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "SVYCLM",
+      "calls": 192.0,
+      "avg_duration": 67.8,
+      "total_minutes": 216.95
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "035",
+      "status": "PDROP",
+      "calls": 27.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "NA",
+      "calls": 1185.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "AA",
+      "calls": 759.0,
+      "avg_duration": 0.5,
+      "total_minutes": 5.73
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "PU",
+      "calls": 606.0,
+      "avg_duration": 6.1,
+      "total_minutes": 62.07
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "AB",
+      "calls": 521.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "SVYCLM",
+      "calls": 261.0,
+      "avg_duration": 66.7,
+      "total_minutes": 290.22
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "036",
+      "status": "PDROP",
+      "calls": 36.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "NA",
+      "calls": 1338.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "AB",
+      "calls": 983.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "AA",
+      "calls": 531.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.67
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "PU",
+      "calls": 426.0,
+      "avg_duration": 6.0,
+      "total_minutes": 42.28
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "SVYCLM",
+      "calls": 199.0,
+      "avg_duration": 68.6,
+      "total_minutes": 227.5
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "037",
+      "status": "PDROP",
+      "calls": 24.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "038",
+      "status": "NA",
+      "calls": 720.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "038",
+      "status": "AB",
+      "calls": 351.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "038",
+      "status": "AA",
+      "calls": 296.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.03
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "038",
+      "status": "PU",
+      "calls": 259.0,
+      "avg_duration": 6.1,
+      "total_minutes": 26.23
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "038",
+      "status": "SVYCLM",
+      "calls": 84.0,
+      "avg_duration": 69.0,
+      "total_minutes": 96.67
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "039",
+      "status": "NA",
+      "calls": 1046.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "039",
+      "status": "AB",
+      "calls": 960.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "039",
+      "status": "AA",
+      "calls": 739.0,
+      "avg_duration": 0.4,
+      "total_minutes": 4.83
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "039",
+      "status": "PU",
+      "calls": 562.0,
+      "avg_duration": 5.9,
+      "total_minutes": 55.53
+    },
+    {
+      "prefix_2": "03",
+      "prefix_3": "039",
+      "status": "SVYCLM",
+      "calls": 196.0,
+      "avg_duration": 65.0,
+      "total_minutes": 212.28
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "NA",
+      "calls": 507.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "AA",
+      "calls": 275.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.88
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "AB",
+      "calls": 214.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "PU",
+      "calls": 207.0,
+      "avg_duration": 5.6,
+      "total_minutes": 19.22
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "SVYCLM",
+      "calls": 72.0,
+      "avg_duration": 65.8,
+      "total_minutes": 78.95
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "040",
+      "status": "PDROP",
+      "calls": 24.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "NA",
+      "calls": 883.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "AA",
+      "calls": 523.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.6
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "AB",
+      "calls": 462.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "PU",
+      "calls": 407.0,
+      "avg_duration": 5.2,
+      "total_minutes": 35.6
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "SVYCLM",
+      "calls": 121.0,
+      "avg_duration": 67.1,
+      "total_minutes": 135.28
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "041",
+      "status": "PDROP",
+      "calls": 38.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "NA",
+      "calls": 1736.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "AA",
+      "calls": 886.0,
+      "avg_duration": 0.4,
+      "total_minutes": 5.28
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "AB",
+      "calls": 841.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "PU",
+      "calls": 703.0,
+      "avg_duration": 5.9,
+      "total_minutes": 69.37
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "SVYCLM",
+      "calls": 256.0,
+      "avg_duration": 67.1,
+      "total_minutes": 286.17
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "042",
+      "status": "PDROP",
+      "calls": 62.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "NA",
+      "calls": 1909.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "AA",
+      "calls": 1205.0,
+      "avg_duration": 0.4,
+      "total_minutes": 7.35
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "AB",
+      "calls": 941.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "PU",
+      "calls": 839.0,
+      "avg_duration": 6.2,
+      "total_minutes": 86.33
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "SVYCLM",
+      "calls": 436.0,
+      "avg_duration": 69.1,
+      "total_minutes": 501.87
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "043",
+      "status": "PDROP",
+      "calls": 69.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "044",
+      "status": "NA",
+      "calls": 705.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "044",
+      "status": "AB",
+      "calls": 360.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "044",
+      "status": "AA",
+      "calls": 350.0,
+      "avg_duration": 0.5,
+      "total_minutes": 2.85
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "044",
+      "status": "PU",
+      "calls": 294.0,
+      "avg_duration": 5.5,
+      "total_minutes": 27.05
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "044",
+      "status": "SVYCLM",
+      "calls": 128.0,
+      "avg_duration": 68.0,
+      "total_minutes": 145.08
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "NA",
+      "calls": 987.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "AA",
+      "calls": 546.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.85
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "AB",
+      "calls": 417.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "PU",
+      "calls": 409.0,
+      "avg_duration": 6.0,
+      "total_minutes": 41.03
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "SVYCLM",
+      "calls": 161.0,
+      "avg_duration": 66.4,
+      "total_minutes": 178.22
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "045",
+      "status": "PDROP",
+      "calls": 27.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "NA",
+      "calls": 26672.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "AA",
+      "calls": 16087.0,
+      "avg_duration": 0.4,
+      "total_minutes": 101.33
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "AB",
+      "calls": 14129.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "PU",
+      "calls": 12040.0,
+      "avg_duration": 5.9,
+      "total_minutes": 1192.72
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "SVYCLM",
+      "calls": 5084.0,
+      "avg_duration": 67.0,
+      "total_minutes": 5674.7
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "PDROP",
+      "calls": 1189.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "046",
+      "status": "ADC",
+      "calls": 21.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "NA",
+      "calls": 975.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "AA",
+      "calls": 570.0,
+      "avg_duration": 0.3,
+      "total_minutes": 3.23
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "PU",
+      "calls": 552.0,
+      "avg_duration": 5.2,
+      "total_minutes": 47.22
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "AB",
+      "calls": 371.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "SVYCLM",
+      "calls": 138.0,
+      "avg_duration": 69.1,
+      "total_minutes": 158.93
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "047",
+      "status": "PDROP",
+      "calls": 38.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "048",
+      "status": "NA",
+      "calls": 178.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "048",
+      "status": "AA",
+      "calls": 107.0,
+      "avg_duration": 0.7,
+      "total_minutes": 1.33
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "048",
+      "status": "AB",
+      "calls": 78.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "048",
+      "status": "PU",
+      "calls": 69.0,
+      "avg_duration": 6.2,
+      "total_minutes": 7.08
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "048",
+      "status": "SVYCLM",
+      "calls": 30.0,
+      "avg_duration": 64.9,
+      "total_minutes": 32.47
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "NA",
+      "calls": 908.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "AA",
+      "calls": 519.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.37
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "PU",
+      "calls": 390.0,
+      "avg_duration": 6.2,
+      "total_minutes": 40.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "AB",
+      "calls": 385.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "SVYCLM",
+      "calls": 177.0,
+      "avg_duration": 65.1,
+      "total_minutes": 192.18
+    },
+    {
+      "prefix_2": "04",
+      "prefix_3": "049",
+      "status": "PDROP",
+      "calls": 26.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "050",
+      "status": "NA",
+      "calls": 426.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "050",
+      "status": "AA",
+      "calls": 246.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.17
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "050",
+      "status": "AB",
+      "calls": 230.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "050",
+      "status": "PU",
+      "calls": 208.0,
+      "avg_duration": 5.4,
+      "total_minutes": 18.62
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "050",
+      "status": "SVYCLM",
+      "calls": 50.0,
+      "avg_duration": 63.1,
+      "total_minutes": 52.6
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "NA",
+      "calls": 2009.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "AA",
+      "calls": 1262.0,
+      "avg_duration": 0.4,
+      "total_minutes": 8.85
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "AB",
+      "calls": 953.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "PU",
+      "calls": 809.0,
+      "avg_duration": 6.6,
+      "total_minutes": 88.13
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "SVYCLM",
+      "calls": 357.0,
+      "avg_duration": 65.4,
+      "total_minutes": 389.38
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "051",
+      "status": "PDROP",
+      "calls": 79.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "NA",
+      "calls": 1869.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "AA",
+      "calls": 1004.0,
+      "avg_duration": 0.4,
+      "total_minutes": 6.18
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "AB",
+      "calls": 900.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "PU",
+      "calls": 876.0,
+      "avg_duration": 6.1,
+      "total_minutes": 88.37
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "SVYCLM",
+      "calls": 306.0,
+      "avg_duration": 66.9,
+      "total_minutes": 341.17
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "PDROP",
+      "calls": 83.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "052",
+      "status": "ADC",
+      "calls": 24.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "NA",
+      "calls": 764.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "AA",
+      "calls": 362.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.82
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "AB",
+      "calls": 316.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "PU",
+      "calls": 298.0,
+      "avg_duration": 6.3,
+      "total_minutes": 31.22
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "SVYCLM",
+      "calls": 130.0,
+      "avg_duration": 65.2,
+      "total_minutes": 141.28
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "053",
+      "status": "PDROP",
+      "calls": 30.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "NA",
+      "calls": 2524.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "AA",
+      "calls": 1351.0,
+      "avg_duration": 0.3,
+      "total_minutes": 7.47
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "AB",
+      "calls": 1163.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "PU",
+      "calls": 1035.0,
+      "avg_duration": 6.1,
+      "total_minutes": 104.82
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "SVYCLM",
+      "calls": 407.0,
+      "avg_duration": 65.8,
+      "total_minutes": 446.05
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "054",
+      "status": "PDROP",
+      "calls": 96.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "NA",
+      "calls": 2754.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "AB",
+      "calls": 1771.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "AA",
+      "calls": 1589.0,
+      "avg_duration": 0.3,
+      "total_minutes": 7.63
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "PU",
+      "calls": 1177.0,
+      "avg_duration": 5.8,
+      "total_minutes": 113.75
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "SVYCLM",
+      "calls": 403.0,
+      "avg_duration": 66.4,
+      "total_minutes": 446.28
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "055",
+      "status": "PDROP",
+      "calls": 121.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "NA",
+      "calls": 12173.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "AB",
+      "calls": 7059.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "AA",
+      "calls": 5123.0,
+      "avg_duration": 0.3,
+      "total_minutes": 28.93
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "PU",
+      "calls": 3931.0,
+      "avg_duration": 5.7,
+      "total_minutes": 373.33
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "SVYCLM",
+      "calls": 1907.0,
+      "avg_duration": 66.6,
+      "total_minutes": 2115.72
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "PDROP",
+      "calls": 346.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "056",
+      "status": "ADC",
+      "calls": 67.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "NA",
+      "calls": 19707.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "AB",
+      "calls": 10841.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "AA",
+      "calls": 8860.0,
+      "avg_duration": 0.3,
+      "total_minutes": 50.13
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "PU",
+      "calls": 7671.0,
+      "avg_duration": 6.0,
+      "total_minutes": 771.5
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "SVYCLM",
+      "calls": 3401.0,
+      "avg_duration": 66.2,
+      "total_minutes": 3750.43
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "PDROP",
+      "calls": 652.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "057",
+      "status": "ADC",
+      "calls": 26.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "NA",
+      "calls": 1565.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "AB",
+      "calls": 965.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "AA",
+      "calls": 865.0,
+      "avg_duration": 0.3,
+      "total_minutes": 3.97
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "PU",
+      "calls": 580.0,
+      "avg_duration": 5.3,
+      "total_minutes": 51.22
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "SVYCLM",
+      "calls": 159.0,
+      "avg_duration": 66.8,
+      "total_minutes": 177.05
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "058",
+      "status": "PDROP",
+      "calls": 57.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "059",
+      "status": "NA",
+      "calls": 737.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "059",
+      "status": "AA",
+      "calls": 465.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.02
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "059",
+      "status": "AB",
+      "calls": 342.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "059",
+      "status": "PU",
+      "calls": 330.0,
+      "avg_duration": 5.4,
+      "total_minutes": 29.65
+    },
+    {
+      "prefix_2": "05",
+      "prefix_3": "059",
+      "status": "SVYCLM",
+      "calls": 109.0,
+      "avg_duration": 65.5,
+      "total_minutes": 119.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "060",
+      "status": "AB",
+      "calls": 33.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "060",
+      "status": "PU",
+      "calls": 23.0,
+      "avg_duration": 7.6,
+      "total_minutes": 2.78
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "061",
+      "status": "NA",
+      "calls": 21.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "NA",
+      "calls": 968.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "AA",
+      "calls": 462.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.87
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "AB",
+      "calls": 399.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "PU",
+      "calls": 380.0,
+      "avg_duration": 5.8,
+      "total_minutes": 36.45
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "SVYCLM",
+      "calls": 173.0,
+      "avg_duration": 64.6,
+      "total_minutes": 186.18
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "062",
+      "status": "PDROP",
+      "calls": 72.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "NA",
+      "calls": 1244.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "AB",
+      "calls": 684.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "AA",
+      "calls": 631.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.8
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "PU",
+      "calls": 587.0,
+      "avg_duration": 5.4,
+      "total_minutes": 53.12
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "SVYCLM",
+      "calls": 201.0,
+      "avg_duration": 65.5,
+      "total_minutes": 219.47
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "063",
+      "status": "PDROP",
+      "calls": 82.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "NA",
+      "calls": 1592.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "AA",
+      "calls": 986.0,
+      "avg_duration": 0.4,
+      "total_minutes": 6.72
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "AB",
+      "calls": 816.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "PU",
+      "calls": 534.0,
+      "avg_duration": 5.6,
+      "total_minutes": 49.88
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "SVYCLM",
+      "calls": 272.0,
+      "avg_duration": 63.7,
+      "total_minutes": 288.65
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "064",
+      "status": "PDROP",
+      "calls": 56.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "NA",
+      "calls": 1532.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "AA",
+      "calls": 914.0,
+      "avg_duration": 0.3,
+      "total_minutes": 4.52
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "AB",
+      "calls": 844.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "PU",
+      "calls": 596.0,
+      "avg_duration": 5.8,
+      "total_minutes": 58.05
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "SVYCLM",
+      "calls": 218.0,
+      "avg_duration": 64.9,
+      "total_minutes": 235.98
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "065",
+      "status": "PDROP",
+      "calls": 82.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "NA",
+      "calls": 2046.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "AB",
+      "calls": 1241.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "AA",
+      "calls": 922.0,
+      "avg_duration": 0.3,
+      "total_minutes": 5.02
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "PU",
+      "calls": 797.0,
+      "avg_duration": 5.7,
+      "total_minutes": 75.35
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "SVYCLM",
+      "calls": 218.0,
+      "avg_duration": 64.7,
+      "total_minutes": 235.03
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "066",
+      "status": "PDROP",
+      "calls": 62.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "NA",
+      "calls": 937.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "AB",
+      "calls": 533.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "AA",
+      "calls": 462.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.12
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "PU",
+      "calls": 405.0,
+      "avg_duration": 5.6,
+      "total_minutes": 38.08
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "SVYCLM",
+      "calls": 128.0,
+      "avg_duration": 65.7,
+      "total_minutes": 140.15
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "067",
+      "status": "PDROP",
+      "calls": 33.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "AB",
+      "calls": 2535.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "NA",
+      "calls": 2332.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "AA",
+      "calls": 1441.0,
+      "avg_duration": 0.4,
+      "total_minutes": 10.2
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "PU",
+      "calls": 1101.0,
+      "avg_duration": 5.3,
+      "total_minutes": 97.45
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "SVYCLM",
+      "calls": 286.0,
+      "avg_duration": 64.5,
+      "total_minutes": 307.28
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "068",
+      "status": "PDROP",
+      "calls": 89.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "NA",
+      "calls": 2653.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "AA",
+      "calls": 1501.0,
+      "avg_duration": 0.4,
+      "total_minutes": 10.43
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "AB",
+      "calls": 1424.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "PU",
+      "calls": 906.0,
+      "avg_duration": 6.1,
+      "total_minutes": 91.43
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "SVYCLM",
+      "calls": 392.0,
+      "avg_duration": 65.4,
+      "total_minutes": 427.23
+    },
+    {
+      "prefix_2": "06",
+      "prefix_3": "069",
+      "status": "PDROP",
+      "calls": 51.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "NA",
+      "calls": 1126.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "AB",
+      "calls": 744.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "AA",
+      "calls": 564.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.43
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "PU",
+      "calls": 359.0,
+      "avg_duration": 5.7,
+      "total_minutes": 33.92
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "SVYCLM",
+      "calls": 126.0,
+      "avg_duration": 66.8,
+      "total_minutes": 140.22
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "070",
+      "status": "PDROP",
+      "calls": 28.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "NA",
+      "calls": 692.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "AB",
+      "calls": 423.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "AA",
+      "calls": 358.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.5
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "PU",
+      "calls": 270.0,
+      "avg_duration": 5.9,
+      "total_minutes": 26.68
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "SVYCLM",
+      "calls": 103.0,
+      "avg_duration": 64.5,
+      "total_minutes": 110.77
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "071",
+      "status": "PDROP",
+      "calls": 25.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "NA",
+      "calls": 547.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "AA",
+      "calls": 311.0,
+      "avg_duration": 0.2,
+      "total_minutes": 1.2
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "AB",
+      "calls": 307.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "PU",
+      "calls": 262.0,
+      "avg_duration": 6.3,
+      "total_minutes": 27.53
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "SVYCLM",
+      "calls": 106.0,
+      "avg_duration": 66.6,
+      "total_minutes": 117.63
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "072",
+      "status": "PDROP",
+      "calls": 25.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "NA",
+      "calls": 1149.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "AA",
+      "calls": 589.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.9
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "AB",
+      "calls": 576.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "PU",
+      "calls": 473.0,
+      "avg_duration": 6.2,
+      "total_minutes": 48.92
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "SVYCLM",
+      "calls": 184.0,
+      "avg_duration": 67.8,
+      "total_minutes": 207.83
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "073",
+      "status": "PDROP",
+      "calls": 33.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "NA",
+      "calls": 749.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "AB",
+      "calls": 385.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "AA",
+      "calls": 371.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.88
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "PU",
+      "calls": 286.0,
+      "avg_duration": 5.2,
+      "total_minutes": 25.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "SVYCLM",
+      "calls": 122.0,
+      "avg_duration": 66.6,
+      "total_minutes": 135.35
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "074",
+      "status": "PDROP",
+      "calls": 32.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "NA",
+      "calls": 922.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "AB",
+      "calls": 544.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "AA",
+      "calls": 518.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.18
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "PU",
+      "calls": 423.0,
+      "avg_duration": 5.9,
+      "total_minutes": 41.42
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "SVYCLM",
+      "calls": 156.0,
+      "avg_duration": 66.9,
+      "total_minutes": 174.03
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "075",
+      "status": "PDROP",
+      "calls": 33.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "NA",
+      "calls": 849.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "AB",
+      "calls": 412.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "AA",
+      "calls": 386.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.75
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "PU",
+      "calls": 301.0,
+      "avg_duration": 5.8,
+      "total_minutes": 28.85
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "SVYCLM",
+      "calls": 128.0,
+      "avg_duration": 69.3,
+      "total_minutes": 147.9
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "076",
+      "status": "PDROP",
+      "calls": 29.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "NA",
+      "calls": 1682.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "AB",
+      "calls": 1069.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "AA",
+      "calls": 795.0,
+      "avg_duration": 0.3,
+      "total_minutes": 4.38
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "PU",
+      "calls": 715.0,
+      "avg_duration": 5.2,
+      "total_minutes": 62.1
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "SVYCLM",
+      "calls": 246.0,
+      "avg_duration": 66.1,
+      "total_minutes": 271.02
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "077",
+      "status": "PDROP",
+      "calls": 66.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "NA",
+      "calls": 1247.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "AB",
+      "calls": 751.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "AA",
+      "calls": 522.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.38
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "PU",
+      "calls": 359.0,
+      "avg_duration": 5.6,
+      "total_minutes": 33.28
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "SVYCLM",
+      "calls": 190.0,
+      "avg_duration": 69.5,
+      "total_minutes": 219.98
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "078",
+      "status": "PDROP",
+      "calls": 34.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "NA",
+      "calls": 2037.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "AB",
+      "calls": 1085.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "AA",
+      "calls": 703.0,
+      "avg_duration": 0.3,
+      "total_minutes": 3.98
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "PU",
+      "calls": 583.0,
+      "avg_duration": 5.3,
+      "total_minutes": 51.75
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "SVYCLM",
+      "calls": 257.0,
+      "avg_duration": 67.9,
+      "total_minutes": 290.93
+    },
+    {
+      "prefix_2": "07",
+      "prefix_3": "079",
+      "status": "PDROP",
+      "calls": 41.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "NA",
+      "calls": 52497.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "AB",
+      "calls": 27225.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "AA",
+      "calls": 22303.0,
+      "avg_duration": 0.4,
+      "total_minutes": 138.05
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "PU",
+      "calls": 19700.0,
+      "avg_duration": 5.4,
+      "total_minutes": 1774.55
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "SVYCLM",
+      "calls": 7872.0,
+      "avg_duration": 65.1,
+      "total_minutes": 8542.5
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "PDROP",
+      "calls": 2025.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "080",
+      "status": "ADC",
+      "calls": 56.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "NA",
+      "calls": 95681.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "AB",
+      "calls": 49596.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "AA",
+      "calls": 44267.0,
+      "avg_duration": 0.3,
+      "total_minutes": 258.13
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "PU",
+      "calls": 42396.0,
+      "avg_duration": 5.1,
+      "total_minutes": 3585.08
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "SVYCLM",
+      "calls": 12898.0,
+      "avg_duration": 65.1,
+      "total_minutes": 13983.7
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "PDROP",
+      "calls": 4918.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "081",
+      "status": "ADC",
+      "calls": 145.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "NA",
+      "calls": 32688.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "AB",
+      "calls": 15947.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "AA",
+      "calls": 12192.0,
+      "avg_duration": 0.4,
+      "total_minutes": 78.88
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "PU",
+      "calls": 12188.0,
+      "avg_duration": 5.2,
+      "total_minutes": 1058.15
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "SVYCLM",
+      "calls": 4564.0,
+      "avg_duration": 66.9,
+      "total_minutes": 5087.35
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "PDROP",
+      "calls": 1289.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "082",
+      "status": "ADC",
+      "calls": 45.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "NA",
+      "calls": 31311.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "AB",
+      "calls": 16737.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "AA",
+      "calls": 11150.0,
+      "avg_duration": 0.4,
+      "total_minutes": 67.53
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "PU",
+      "calls": 9426.0,
+      "avg_duration": 5.5,
+      "total_minutes": 868.23
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "SVYCLM",
+      "calls": 3988.0,
+      "avg_duration": 65.6,
+      "total_minutes": 4357.48
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "PDROP",
+      "calls": 992.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "083",
+      "status": "ADC",
+      "calls": 37.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "NA",
+      "calls": 1204.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "AB",
+      "calls": 636.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "AA",
+      "calls": 492.0,
+      "avg_duration": 0.3,
+      "total_minutes": 2.65
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "PU",
+      "calls": 343.0,
+      "avg_duration": 5.6,
+      "total_minutes": 31.82
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "SVYCLM",
+      "calls": 132.0,
+      "avg_duration": 66.9,
+      "total_minutes": 147.2
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "085",
+      "status": "PDROP",
+      "calls": 29.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "NA",
+      "calls": 12246.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "AB",
+      "calls": 7535.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "AA",
+      "calls": 4839.0,
+      "avg_duration": 0.4,
+      "total_minutes": 28.9
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "PU",
+      "calls": 4063.0,
+      "avg_duration": 5.7,
+      "total_minutes": 388.97
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "SVYCLM",
+      "calls": 1778.0,
+      "avg_duration": 66.1,
+      "total_minutes": 1958.33
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "086",
+      "status": "PDROP",
+      "calls": 447.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "087",
+      "status": "NA",
+      "calls": 726.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "087",
+      "status": "AB",
+      "calls": 439.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "087",
+      "status": "AA",
+      "calls": 383.0,
+      "avg_duration": 0.4,
+      "total_minutes": 2.75
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "087",
+      "status": "PU",
+      "calls": 284.0,
+      "avg_duration": 5.3,
+      "total_minutes": 25.02
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "087",
+      "status": "SVYCLM",
+      "calls": 91.0,
+      "avg_duration": 67.1,
+      "total_minutes": 101.8
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "NA",
+      "calls": 3029.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "AB",
+      "calls": 1910.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "AA",
+      "calls": 1218.0,
+      "avg_duration": 0.4,
+      "total_minutes": 8.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "PU",
+      "calls": 1089.0,
+      "avg_duration": 5.1,
+      "total_minutes": 92.63
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "SVYCLM",
+      "calls": 464.0,
+      "avg_duration": 63.0,
+      "total_minutes": 487.57
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "088",
+      "status": "PDROP",
+      "calls": 136.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "NA",
+      "calls": 862.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "AB",
+      "calls": 436.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "AA",
+      "calls": 417.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.98
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "PU",
+      "calls": 353.0,
+      "avg_duration": 5.6,
+      "total_minutes": 33.07
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "SVYCLM",
+      "calls": 88.0,
+      "avg_duration": 62.0,
+      "total_minutes": 90.88
+    },
+    {
+      "prefix_2": "08",
+      "prefix_3": "089",
+      "status": "PDROP",
+      "calls": 30.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "NA",
+      "calls": 724.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "AB",
+      "calls": 410.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "AA",
+      "calls": 315.0,
+      "avg_duration": 0.3,
+      "total_minutes": 1.68
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "PU",
+      "calls": 270.0,
+      "avg_duration": 5.6,
+      "total_minutes": 24.92
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "SVYCLM",
+      "calls": 84.0,
+      "avg_duration": 67.2,
+      "total_minutes": 94.03
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "090",
+      "status": "PDROP",
+      "calls": 26.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "NA",
+      "calls": 1828.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "AB",
+      "calls": 1260.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "AA",
+      "calls": 1206.0,
+      "avg_duration": 0.3,
+      "total_minutes": 6.35
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "PU",
+      "calls": 709.0,
+      "avg_duration": 5.5,
+      "total_minutes": 64.67
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "SVYCLM",
+      "calls": 219.0,
+      "avg_duration": 62.8,
+      "total_minutes": 229.15
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "091",
+      "status": "PDROP",
+      "calls": 77.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "NA",
+      "calls": 1283.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "AB",
+      "calls": 659.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "AA",
+      "calls": 499.0,
+      "avg_duration": 0.4,
+      "total_minutes": 3.48
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "PU",
+      "calls": 435.0,
+      "avg_duration": 5.2,
+      "total_minutes": 37.78
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "SVYCLM",
+      "calls": 144.0,
+      "avg_duration": 65.1,
+      "total_minutes": 156.27
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "092",
+      "status": "PDROP",
+      "calls": 38.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "NA",
+      "calls": 3880.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "AB",
+      "calls": 2196.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "PU",
+      "calls": 1658.0,
+      "avg_duration": 5.3,
+      "total_minutes": 145.53
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "AA",
+      "calls": 1428.0,
+      "avg_duration": 0.3,
+      "total_minutes": 7.3
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "SVYCLM",
+      "calls": 589.0,
+      "avg_duration": 65.2,
+      "total_minutes": 640.27
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "093",
+      "status": "PDROP",
+      "calls": 127.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "094",
+      "status": "NA",
+      "calls": 426.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "094",
+      "status": "AB",
+      "calls": 280.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "094",
+      "status": "AA",
+      "calls": 178.0,
+      "avg_duration": 0.4,
+      "total_minutes": 1.23
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "094",
+      "status": "PU",
+      "calls": 163.0,
+      "avg_duration": 5.5,
+      "total_minutes": 14.92
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "094",
+      "status": "SVYCLM",
+      "calls": 68.0,
+      "avg_duration": 70.0,
+      "total_minutes": 79.32
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "NA",
+      "calls": 34952.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "AB",
+      "calls": 20293.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "AA",
+      "calls": 14225.0,
+      "avg_duration": 0.4,
+      "total_minutes": 86.22
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "PU",
+      "calls": 12024.0,
+      "avg_duration": 5.7,
+      "total_minutes": 1140.38
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "SVYCLM",
+      "calls": 4249.0,
+      "avg_duration": 65.9,
+      "total_minutes": 4664.85
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "PDROP",
+      "calls": 1237.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "095",
+      "status": "ADC",
+      "calls": 48.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "NA",
+      "calls": 19995.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "AB",
+      "calls": 10261.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "AA",
+      "calls": 6416.0,
+      "avg_duration": 0.4,
+      "total_minutes": 40.43
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "PU",
+      "calls": 6000.0,
+      "avg_duration": 5.6,
+      "total_minutes": 560.35
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "SVYCLM",
+      "calls": 2791.0,
+      "avg_duration": 65.0,
+      "total_minutes": 3023.2
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "096",
+      "status": "PDROP",
+      "calls": 561.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "NA",
+      "calls": 15536.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "AB",
+      "calls": 7802.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "PU",
+      "calls": 5248.0,
+      "avg_duration": 5.5,
+      "total_minutes": 476.52
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "AA",
+      "calls": 5187.0,
+      "avg_duration": 0.4,
+      "total_minutes": 32.52
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "SVYCLM",
+      "calls": 2500.0,
+      "avg_duration": 66.3,
+      "total_minutes": 2760.58
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "097",
+      "status": "PDROP",
+      "calls": 555.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "NA",
+      "calls": 21255.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "AB",
+      "calls": 11399.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "PU",
+      "calls": 6853.0,
+      "avg_duration": 5.4,
+      "total_minutes": 614.5
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "AA",
+      "calls": 6809.0,
+      "avg_duration": 0.4,
+      "total_minutes": 44.1
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "SVYCLM",
+      "calls": 2746.0,
+      "avg_duration": 66.5,
+      "total_minutes": 3043.9
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "PDROP",
+      "calls": 717.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "098",
+      "status": "ADC",
+      "calls": 34.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    },
+    {
+      "prefix_2": "09",
+      "prefix_3": "099",
+      "status": "NA",
+      "calls": 640.0,
+      "avg_duration": 0.0,
+      "total_minutes": 0.0
+    }
+  ],
+  "status_definitions": [
+    {
+      "status": "CHIAMA",
+      "status_name": "CHIAMATA VUOTA",
+      "selectable": "Y",
+      "human_answered": "N",
+      "sale": "N",
+      "dnc": "N",
+      "customer_contact": "N",
+      "not_interested": "N",
+      "scheduled_callback": "N",
+      "completed": "N"
+    },
+    {
+      "status": "FAX",
+      "status_name": "FAX",
+      "selectable": "Y",
+      "human_answered": "N",
+      "sale": "N",
+      "dnc": "N",
+      "customer_contact": "N",
+      "not_interested": "N",
+      "scheduled_callback": "N",
+      "completed": "N"
+    },
+    {
+      "status": "NONDEC",
+      "status_name": "NON DECIDE",
+      "selectable": "Y",
+      "human_answered": "N",
+      "sale": "N",
+      "dnc": "N",
+      "customer_contact": "N",
+      "not_interested": "N",
+      "scheduled_callback": "N",
+      "completed": "N"
+    },
+    {
+      "status": "RIFIUT",
+      "status_name": "RIFIUTA ASCOLTO",
+      "selectable": "Y",
+      "human_answered": "N",
+      "sale": "N",
+      "dnc": "N",
+      "customer_contact": "N",
+      "not_interested": "N",
+      "scheduled_callback": "N",
+      "completed": "N"
+    },
+    {
+      "status": "SEGRET",
+      "status_name": "SEGRETERIA",
+      "selectable": "Y",
+      "human_answered": "N",
+      "sale": "N",
+      "dnc": "N",
+      "customer_contact": "N",
+      "not_interested": "N",
+      "scheduled_callback": "N",
+      "completed": "N"
+    }
+  ]
+}

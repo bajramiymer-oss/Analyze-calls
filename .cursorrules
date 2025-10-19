@@ -1,0 +1,430 @@
+# Cursor AI Rules for Vicidial Call Analysis Platform
+
+## Project Context
+
+**Type:** Streamlit web application
+**Purpose:** AI-powered call analysis for Vicidial telephony
+**Stack:** Python 3.9+, Streamlit, OpenAI API, MySQL, Google Drive API
+**Total Lines:** ~5,000 (core + UI)
+
+---
+
+## Architecture Overview
+
+```
+app.py (Dashboard) → pages/*.py (UI) → core/*.py (Logic)
+                                    ↓
+                              OpenAI API (Whisper + GPT-4)
+                              Vicidial DB (MySQL)
+                              Google Drive API
+```
+
+### Key Files
+
+- **app.py** - Dashboard (navigation only, NO business logic)
+- **pages/1_Pipeline_Komplet.py** - Main workflow orchestrator
+- **core/campaign_manager.py** - Campaign context & documents
+- **core/analysis_llm.py** - GPT-4 analysis engine
+- **core/transcription_audio.py** - Audio → Text pipeline
+- **core/reporting_excel.py** - Report generation
+
+---
+
+## Code Conventions
+
+### 1. File Organization
+
+**DO:**
+```python
+# pages/*.py - UI & user interaction
+# core/*.py - Reusable business logic
+# config/*.json - Configuration data
+```
+
+**DON'T:**
+```python
+# ❌ Business logic in pages/*.py
+# ❌ UI code in core/*.py
+# ❌ Hardcoded configs in code
+```
+
+### 2. Function Length
+
+**Keep functions under 50 lines.** If longer, break into helper functions.
+
+```python
+# ✅ GOOD
+def process_audio():
+    files = collect_files()
+    transcripts = transcribe_files(files)
+    results = analyze_transcripts(transcripts)
+    return results
+
+# ❌ BAD - 200 line monolith
+def process_audio():
+    # ... 200 lines of mixed logic ...
+```
+
+### 3. Type Hints (MANDATORY)
+
+```python
+# ✅ ALWAYS use type hints
+def analyze_agent_transcripts(
+    agent_name: str,
+    transcript_text: str,
+    language: str = "sq"
+) -> Dict[str, Any]:
+    ...
+
+# ❌ NEVER skip type hints
+def analyze_agent_transcripts(agent_name, transcript_text, language="sq"):
+    ...
+```
+
+### 4. Docstrings (MANDATORY for public functions)
+
+```python
+def create_campaign(
+    name: str,
+    project_context_hint: str = "",
+    summary_hint: str = "",
+    bullets_hint: str = ""
+) -> dict:
+    """
+    Krijon një fushatë të re me kontekst dhe dokumente.
+
+    Args:
+        name: Emri i fushatës (unique, required)
+        project_context_hint: Konteksti i biznesit/fushatës (optional)
+        summary_hint: Udhëzime për përmbledhjen (optional)
+        bullets_hint: Udhëzime për bullet points (optional)
+
+    Returns:
+        dict: Campaign object me id, name, created_date, etc.
+
+    Raises:
+        ValueError: Nëse emri ekziston tashmë
+
+    Example:
+        >>> campaign = create_campaign(
+        ...     name="Google Reserve UK",
+        ...     project_context_hint="Outbound calls for restaurants..."
+        ... )
+        >>> print(campaign["id"])
+        google_reserve_uk_abc123
+
+    Related:
+        - update_campaign()
+        - delete_campaign()
+        - add_document_to_campaign()
+    """
+    ...
+```
+
+### 5. Indentation & Formatting
+
+- **4 spaces** (not tabs)
+- **Max 120 characters per line**
+- **Blank line** between functions
+- **No trailing whitespace**
+
+```python
+# ✅ CORRECT
+def my_function(param1: str, param2: int) -> bool:
+    result = process(param1)
+    return result > param2
+
+# ❌ WRONG indentation
+def my_function(param1: str, param2: int) -> bool:
+  result = process(param1)  # 2 spaces
+  return result > param2
+```
+
+### 6. Imports
+
+```python
+# Order: stdlib → third-party → local
+import os
+import pathlib
+from typing import Dict, List, Optional
+
+import streamlit as st
+import pandas as pd
+from openai import OpenAI
+
+from core.config import OUT_DIR
+from core.campaign_manager import get_campaign_hints
+```
+
+### 7. Error Handling
+
+```python
+# ✅ GOOD - Specific exceptions
+try:
+    campaign = get_campaign_by_id(campaign_id)
+except CampaignNotFoundError as e:
+    st.error(f"Kampanja nuk u gjet: {e}")
+    return None
+
+# ❌ BAD - Catch-all
+try:
+    campaign = get_campaign_by_id(campaign_id)
+except Exception as e:
+    pass  # Silent failure
+```
+
+---
+
+## Common Modification Patterns
+
+### Adding a New Campaign Feature
+
+1. **Update:** `core/campaign_manager.py` (business logic)
+2. **Update:** `config/campaign_contexts.json` (schema if needed)
+3. **Update:** `pages/5_Settings.py` (UI for management)
+4. **Update:** `pages/1_Pipeline_Komplet.py` (integration in pipeline)
+5. **Test:** Create dummy campaign via UI
+
+### Modifying LLM Analysis
+
+1. **Update:** `core/prompt_analysis_template.txt` (prompt)
+2. **Update:** `core/analysis_llm.py` (if logic changes)
+3. **Test:** Run with sample transcript
+4. **Validate:** Check JSON output format
+
+### Adding a New Report Type
+
+1. **Create:** Function in `core/reporting_excel.py`
+2. **Update:** `pages/2_Raporte.py` (add tab/section)
+3. **Document:** Add to README.md usage examples
+
+### Changing UI Flow
+
+1. **Update:** `pages/*.py` (ONLY UI, no logic)
+2. **Keep:** Business logic in `core/*.py`
+3. **Preserve:** Existing function signatures in core
+
+---
+
+## Testing Strategy
+
+### Before Committing
+
+```bash
+# 1. Check syntax
+python -m py_compile app.py pages/*.py core/*.py
+
+# 2. Run app
+streamlit run app.py
+
+# 3. Test main flows:
+#    - Dashboard navigation
+#    - Pipeline with sample audio
+#    - Campaign creation/modification
+#    - Report generation
+```
+
+### Edge Cases to Test
+
+- Empty inputs
+- Missing files
+- API failures (simulate with bad keys)
+- Large files (>5MB)
+- Special characters in names
+- Concurrent access (multiple tabs)
+
+---
+
+## AI Assistant Guidelines
+
+### When Modifying Code
+
+1. **READ** the entire function first
+2. **PRESERVE** existing functionality
+3. **ADD** comments for complex logic
+4. **UPDATE** docstrings if signature changes
+5. **CHECK** type hints match implementation
+6. **MAINTAIN** consistent indentation
+
+### When Adding Features
+
+1. **ASK** which file(s) to modify
+2. **SUGGEST** the best location (core vs pages)
+3. **PROPOSE** function signature with types
+4. **IMPLEMENT** with error handling
+5. **DOCUMENT** in docstring
+6. **UPDATE** README if user-facing
+
+### When Debugging
+
+1. **CHECK** error message carefully
+2. **IDENTIFY** the file and line number
+3. **UNDERSTAND** the context (read 10 lines around)
+4. **FIX** the root cause (not just symptoms)
+5. **TEST** the fix works
+6. **VERIFY** no new issues introduced
+
+---
+
+## File-Specific Notes
+
+### app.py
+- **Purpose:** Dashboard/navigation ONLY
+- **NO:** Business logic, API calls, data processing
+- **YES:** Metrics display, quick stats, navigation buttons
+
+### pages/1_Pipeline_Komplet.py
+- **Purpose:** Orchestrates full workflow
+- **Pattern:** Collect input → Call core functions → Display results
+- **NO:** Inline business logic (extract to core/)
+
+### core/campaign_manager.py
+- **Purpose:** Campaign CRUD + document management
+- **Pattern:** Pure functions, no Streamlit imports
+- **Returns:** Plain dicts/objects (not Streamlit UI)
+
+### core/analysis_llm.py
+- **Purpose:** LLM interaction ONLY
+- **Pattern:** Template → API call → Parse response
+- **Caching:** Consider for expensive calls
+
+### core/prompt_analysis_template.txt
+- **Purpose:** LLM prompt template
+- **Format:** Plain text with {placeholders}
+- **Modify:** Add context, change instructions
+- **Test:** After changes, verify output quality
+
+---
+
+## Git Workflow
+
+### Commit Messages
+
+```bash
+# ✅ GOOD
+git commit -m "feat(campaign): Add document upload limit validation"
+git commit -m "fix(analysis): Handle empty transcripts gracefully"
+git commit -m "docs(readme): Add troubleshooting section"
+
+# ❌ BAD
+git commit -m "updates"
+git commit -m "fixed bug"
+git commit -m "changes"
+```
+
+### Branch Naming
+
+```bash
+feature/campaign-tags
+fix/transcription-timeout
+docs/api-examples
+refactor/config-centralization
+```
+
+---
+
+## Performance Considerations
+
+### Streamlit Specifics
+
+- Use `@st.cache_data` for expensive computations
+- Avoid reloading large files on every rerun
+- Keep session_state minimal
+- Use callbacks for heavy operations
+
+```python
+# ✅ GOOD - Cached
+@st.cache_data
+def load_large_dataset():
+    return pd.read_csv("large.csv")
+
+# ❌ BAD - Reloads every time
+def load_large_dataset():
+    return pd.read_csv("large.csv")
+```
+
+### API Calls
+
+- Batch requests when possible
+- Use retry logic with exponential backoff
+- Cache results for duplicate requests
+- Show progress bars for long operations
+
+---
+
+## Security Checklist
+
+- [ ] No API keys in code
+- [ ] No passwords in version control
+- [ ] Validate user inputs
+- [ ] Sanitize file names
+- [ ] Check file sizes before processing
+- [ ] Use parameterized SQL queries
+- [ ] Limit API rate (prevent abuse)
+
+---
+
+## Quick Reference
+
+### Find Function
+```bash
+# Search for function definition
+grep -r "def function_name" .
+
+# Search for usage
+grep -r "function_name(" .
+```
+
+### Common Paths
+- Campaigns: `config/campaign_contexts.json`
+- Settings: `config/settings.json`
+- Documents: `assets/campaigns/{campaign_id}/documents/`
+- Output: `out_analysis/{session_name}/`
+- Logs: Check Streamlit console
+
+### Hot Reload
+Streamlit auto-reloads on file save. No need to restart.
+
+---
+
+## Questions to Ask Before Modifying
+
+1. **Where** does this logic belong? (pages vs core)
+2. **What** existing functions can I reuse?
+3. **Will** this break existing functionality?
+4. **Can** this be tested without full pipeline?
+5. **Should** this be configurable?
+6. **Is** error handling sufficient?
+7. **Does** the user need feedback?
+
+---
+
+## Remember
+
+✅ **Think in layers:** UI → Orchestration → Business Logic → Data
+✅ **Code for humans:** Clear names, comments, docstrings
+✅ **Fail gracefully:** Never silent failures, always inform user
+✅ **Keep it simple:** Prefer readable over clever
+✅ **Document as you go:** Future you will thank you
+
+---
+
+**Last Updated:** 2025-10-13
+**Maintainer:** Protrade AI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

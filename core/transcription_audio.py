@@ -7,7 +7,7 @@ Author: Protrade AI
 from __future__ import annotations
 import os, json, time, subprocess, re
 from pathlib import Path
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Callable
 import datetime as dt
 
 # ====================== KONFIGURIMI BAZË ======================
@@ -143,9 +143,15 @@ def transcribe_audio_files(
     force: bool = False,
     keep_wav: bool = False,
     auto_session_if_blank: bool = True,
+    agent_map: Optional[Dict[str, str]] = None,
+    progress_callback: Optional[Callable[[int, int], None]] = None,
 ) -> Dict[str, Any]:
     """
     Transkripton listë audiosh me Direct-first + fallback dhe log global modeli.
+    Ruaj transkriptet e ndara sipas emrit të agjentit.
+
+    Args:
+        progress_callback: Funksion callback(current, total) që thirret pas çdo transkriptimi
     """
     model = _get_models_from_secrets()
     root = Path(out_dir)
@@ -159,26 +165,47 @@ def transcribe_audio_files(
 
     txt_paths: List[Path] = []
     usage = {"gpt4o_direct": 0, "gpt4o_fallback_wav": 0, "whisper_fallback": 0}
+    total = len(input_paths)
 
-    for p in input_paths:
+    for idx, p in enumerate(input_paths):
         src = Path(p)
         if not src.exists():
             continue
 
-        base = root / src.stem
+        # Përcakto emrin e agjentit
+        agent_name = "UNKNOWN"
+        if agent_map:
+            # Përpiquni të gjeni agjentin bazuar në emrin e file-it
+            file_stem = src.stem.lower()
+            for key, value in agent_map.items():
+                if key.lower() in file_stem or file_stem in key.lower():
+                    agent_name = value
+                    break
+
+        # Krijo folder për agjentin
+        agent_folder = root / agent_name
+        _ensure_dir(agent_folder)
+
+        base = agent_folder / src.stem
         txt_path = base.with_suffix(".txt")
 
         # caching
         if reuse_existing and not force and txt_path.exists():
             if txt_path.stat().st_mtime >= src.stat().st_mtime:
                 txt_paths.append(txt_path)
+                # Raporto progres edhe për file të cache-tuar
+                if progress_callback:
+                    progress_callback(idx + 1, total)
                 continue
 
         try:
-            text, model_used = _direct_first_with_fallback(src, root, model_name=model, keep_wav=keep_wav)
+            text, model_used = _direct_first_with_fallback(src, agent_folder, model_name=model, keep_wav=keep_wav)
             usage[model_used] += 1
         except Exception as e:
             print(f"[ERROR] {src.name}: {e}")
+            # Raporto progres edhe për gabime
+            if progress_callback:
+                progress_callback(idx + 1, total)
             continue
 
         if save_txt:
@@ -189,6 +216,10 @@ def transcribe_audio_files(
             doc = Document()
             doc.add_paragraph(text)
             doc.save(base.with_suffix(".docx"))
+
+        # Raporto progres pas çdo transkriptimi
+        if progress_callback:
+            progress_callback(idx + 1, total)
 
     # update global log only once
     _update_global_log(usage)

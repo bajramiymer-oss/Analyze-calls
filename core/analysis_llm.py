@@ -9,11 +9,12 @@ from datetime import datetime
 from openai import OpenAI
 
 from core.config import OUT_DIR
-from core.reporting_excel import write_excel_report_textual
+from core.reporting_excel import write_excel_report_textual, write_excel_report_telemarketing_format
 
 # ============ Config ============
 DEFAULT_MODEL = "gpt-4.1"
-TEMPLATE_PATH = Path("C:/vicidial_agent/core/prompt_analysis_template.txt")
+# Përdor path relativ brenda projektit
+TEMPLATE_PATH = Path("core/prompt_analysis_template.txt")
 
 # Prompt fallback (Versioni 1, pa numra)
 DEFAULT_PROMPT = """Ti je analist i cilësisë së komunikimit për telefonata shërbimi/shitjeje. Prodhon një raport të shkurtër, profesional dhe plotësisht në {language_name}, pa përdorur vlera numerike. Fokusi: ton, qartësi, strukturë dhe ndikim i komunikimit.
@@ -98,6 +99,23 @@ def _render_template_safely(tmpl_raw: str, **kwargs) -> str:
 def _lang_name(code: str) -> str:
     return {"sq": "shqip", "it": "italisht", "en": "anglisht"}.get(code, "shqip")
 
+def _is_english_content(data: dict) -> bool:
+    """Kontrollon nëse përmbajtja është në anglisht"""
+    import re
+
+    # Fjalë të zakonshme shqipe që nuk duhet të jenë në përmbajtje angleze
+    albanian_words = ["agjenti", "klienti", "telefonata", "komunikimi", "cilësia", "analiza", "përmbledhje", "preggi", "migliorare", "ka treguar", "dëgjimi", "mbyllja", "menaxhimi"]
+
+    text = f"{data.get('summary', '')} {' '.join(data.get('preggi', []))} {' '.join(data.get('da_migliorare', []))}"
+    text_lower = text.lower()
+
+    # Nëse gjen fjalë shqipe, nuk është në anglisht
+    for word in albanian_words:
+        if word in text_lower:
+            return False
+
+    return True
+
 # ============ LLM ============
 def analyze_agent_transcripts(
     agent_name: str,
@@ -106,6 +124,8 @@ def analyze_agent_transcripts(
     language: str="sq",
     summary_hint: str="",
     bullets_hint: str="",
+    project_context_hint: str="",
+    documents_text: str="",
 ) -> Dict[str, Any]:
     """
     Kthen dict:
@@ -126,6 +146,8 @@ def analyze_agent_transcripts(
         language_name=_lang_name(language),
         summary_hint=(summary_hint or "").strip(),
         bullets_hint=(bullets_hint or "").strip(),
+        project_context_hint=(project_context_hint or "").strip(),
+        documents_text=(documents_text or "").strip(),
     )
 
     model = model or _load_model_from_secrets()
@@ -141,10 +163,25 @@ def analyze_agent_transcripts(
             {"role": "system", "content": f"Ti je një analist komunikimi. {sys_lang}"},
             {"role": "user", "content": prompt},
         ],
-        temperature=0.3,
+        temperature=0.1,
     )
     content = resp.choices[0].message.content or ""
     data = _coerce_json(content)
+
+    # Kontrollo nëse përmbajtja është në gjuhën e duhur
+    if language == "en" and not _is_english_content(data):
+        # Nëse nuk është në anglisht, përpiquni përsëri me instruksione më të forta
+        retry_prompt = f"IMPORTANT: You MUST respond ONLY in English. All content must be in English language. {prompt}"
+        resp = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": f"Ti je një analist komunikimi. {sys_lang}"},
+                {"role": "user", "content": retry_prompt},
+            ],
+            temperature=0.1,
+        )
+        content = resp.choices[0].message.content or ""
+        data = _coerce_json(content)
 
     # Normalizim minimal
     data["agent"] = (data.get("agent") or agent_name).strip()
@@ -181,6 +218,8 @@ def analyze_calls_grouped_by_agent(
     language: str="sq",
     summary_hint: str="",
     bullets_hint: str="",
+    project_context_hint: str="",
+    documents_text: str="",
 ) -> List[Dict[str, Any]]:
     """
     rows: [{ "agent": ..., "transcript_path": ..., ...}, ...]
@@ -208,6 +247,35 @@ def analyze_calls_grouped_by_agent(
             language=language,
             summary_hint=summary_hint,
             bullets_hint=bullets_hint,
+            project_context_hint=project_context_hint,
+            documents_text=documents_text,
+        )
+        # Llogarit pikësimin (1.0 - 5.0) bazuar në sinjale pozitive/negative
+        def _calculate_agent_score(summary: str, preggi: List[str], da_migliorare: List[str]) -> float:
+            positive_keywords = [
+                "clear", "empat", "active", "listening", "polite", "professional",
+                "qart", "empatik", "degjim", "sjellshem", "profesional",
+                "chiaro", "empatico", "ascolto", "professionale"
+            ]
+            negative_keywords = [
+                "interrupt", "confus", "aggressive", "pushy", "weak closing",
+                "nderpret", "konfuz", "agresiv", "mungese mbyllje",
+                "interrompe", "confuso", "aggressivo", "debole chiusura"
+            ]
+            text = f"{summary} {' '.join(preggi)} {' '.join(da_migliorare)}".lower()
+            pos = sum(1 for k in positive_keywords if k in text)
+            neg = sum(1 for k in negative_keywords if k in text)
+            base = 3.0 + 0.2 * pos - 0.25 * neg
+            if len(preggi) >= 4:
+                base += 0.2
+            if len(da_migliorare) >= 4:
+                base -= 0.1
+            return float(max(1.0, min(5.0, round(base, 1))))
+
+        score_value = _calculate_agent_score(
+            data.get("summary", ""),
+            data.get("preggi", []) or [],
+            data.get("da_migliorare", []) or [],
         )
         for it in items:
             analyzed.append({
@@ -217,6 +285,7 @@ def analyze_calls_grouped_by_agent(
                 "summary": data["summary"],
                 "preggi": " • ".join(data["preggi"]),
                 "da_migliorare": " • ".join(data["da_migliorare"]),
+                "score": score_value,
                 "transcript_path": it.get("transcript_path"),
                 "processed_at": it.get("processed_at"),
                 "source": it.get("source") or "local",
@@ -239,6 +308,8 @@ def write_outputs_and_report(
     language: str = "sq",
     summary_hint: str = "",
     bullets_hint: str = "",
+    project_context_hint: str = "",
+    documents_text: str = "",
 ):
     """
     Shkruan:
@@ -251,6 +322,8 @@ def write_outputs_and_report(
         language=language,
         summary_hint=summary_hint,
         bullets_hint=bullets_hint,
+        project_context_hint=project_context_hint,
+        documents_text=documents_text,
     )
 
     out_root = Path(OUT_DIR); out_root.mkdir(parents=True, exist_ok=True)
@@ -258,7 +331,7 @@ def write_outputs_and_report(
     call_csv = out_root / _session_tagged_name("call_analysis.csv", session_tag)
     with call_csv.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=[
-            "call_id","agent","campaign","summary","preggi","da_migliorare","transcript_path","processed_at","source"
+            "call_id","agent","campaign","summary","preggi","da_migliorare","score","transcript_path","processed_at","source"
         ])
         w.writeheader()
         for r in analyzed_rows:
@@ -266,7 +339,7 @@ def write_outputs_and_report(
 
     weekly_csv = out_root / _session_tagged_name("agent_summary_weekly.csv", session_tag)
     with weekly_csv.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["agent","summary","preggi","da_migliorare"])
+        w = csv.DictWriter(f, fieldnames=["agent","summary","preggi","da_migliorare","score"])
         w.writeheader()
         seen = set()
         for r in analyzed_rows:
@@ -278,9 +351,10 @@ def write_outputs_and_report(
                 "summary": r["summary"],
                 "preggi": r["preggi"],
                 "da_migliorare": r["da_migliorare"],
+                "score": r.get("score", 0.0),
             })
 
-    # Excel sipas formatit ekzistues
+    # Excel sipas formatit të ri telemarketing
     xlsx = out_root / _session_tagged_name("Raport_Analize.xlsx", session_tag)
-    write_excel_report_textual(analyzed_rows, xlsx)
+    write_excel_report_telemarketing_format(analyzed_rows, xlsx, language)
     return str(call_csv), str(weekly_csv), str(xlsx)

@@ -1,0 +1,817 @@
+{
+  "collection_date": "2025-10-15T22:36:42.076761",
+  "campaign_id": "AUTOBIZ",
+  "db_key": "db2",
+  "analysis_period_days": 14,
+  "from_date": "2025-10-01 00:00:00",
+  "to_date": "2025-10-15 23:59:00",
+  "prefix_analysis": [
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 10064,
+      "avg_duration": "0.07804716481187069422363540011",
+      "total_minutes": "785.4666666666666666666666667",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 22138,
+      "avg_duration": "0.07540654078959255578643057236",
+      "total_minutes": "1669.350000000000000000000011",
+      "inbound_calls": 4
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 47109,
+      "avg_duration": "0.07551211021248593686981256312",
+      "total_minutes": "3557.300000000000000000000036",
+      "inbound_calls": 7
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2263,
+      "avg_duration": "0.08993960818971866254234791569",
+      "total_minutes": "203.5333333333333333333333332",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 755,
+      "avg_duration": "0.08264900662251655629139072850",
+      "total_minutes": "62.40000000000000000000000002",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2761,
+      "avg_duration": "0.08996740311481347337921043104",
+      "total_minutes": "248.4000000000000000000000001",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3358,
+      "avg_duration": "0.1239229700218383958705578719",
+      "total_minutes": "416.1333333333333333333333338",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2206,
+      "avg_duration": "0.09121335750982169839830764574",
+      "total_minutes": "201.2166666666666666666666665",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3015,
+      "avg_duration": "0.08348811498065229408512990600",
+      "total_minutes": "251.7166666666666666666666666",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2125,
+      "avg_duration": "0.07578039215686274509803921567",
+      "total_minutes": "161.0333333333333333333333333",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 61279,
+      "avg_duration": "0.09000582037348303116347634176",
+      "total_minutes": "5515.466666666666666666666747",
+      "inbound_calls": 20
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 10487,
+      "avg_duration": "0.07647245796382823177902800299",
+      "total_minutes": "801.9666666666666666666666674",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4542,
+      "avg_duration": "0.09475267870248055188610010277",
+      "total_minutes": "430.3666666666666666666666668",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1222,
+      "avg_duration": "0.08376977632296781232951445720",
+      "total_minutes": "102.3666666666666666666666667",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 10553,
+      "avg_duration": "0.08695789506933257525506175184",
+      "total_minutes": "917.6666666666666666666666672",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1622,
+      "avg_duration": "0.08734073160706946157007809291",
+      "total_minutes": "141.6666666666666666666666667",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2360,
+      "avg_duration": "0.08721045197740112994350282496",
+      "total_minutes": "205.8166666666666666666666669",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 10294,
+      "avg_duration": "0.06964251020011657276083155251",
+      "total_minutes": "716.9000000000000000000000015",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1430,
+      "avg_duration": "0.04432400932400932400932400929",
+      "total_minutes": "63.38333333333333333333333328",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3961,
+      "avg_duration": "0.07708491121770596650677438349",
+      "total_minutes": "305.3333333333333333333333330",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3438,
+      "avg_duration": "0.09363001745200698080279232109",
+      "total_minutes": "321.8999999999999999999999999",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4160,
+      "avg_duration": "0.07917868589743589743589743579",
+      "total_minutes": "329.3833333333333333333333329",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 7180,
+      "avg_duration": "0.07507892293407613741875580318",
+      "total_minutes": "539.0666666666666666666666668",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5496,
+      "avg_duration": "0.09376516254245511887433284816",
+      "total_minutes": "515.3333333333333333333333335",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2518,
+      "avg_duration": "0.07402700555996822875297855437",
+      "total_minutes": "186.3999999999999999999999999",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 14288,
+      "avg_duration": "0.1064086412840612168719671526",
+      "total_minutes": "1520.366666666666666666666677",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 6940,
+      "avg_duration": "0.08487512007684918347742555235",
+      "total_minutes": "589.0333333333333333333333333",
+      "inbound_calls": 3
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 219503,
+      "avg_duration": "0.08696433913583565296753727111",
+      "total_minutes": "19088.93333333333333333333362",
+      "inbound_calls": 40
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 6806,
+      "avg_duration": "0.08002008032128514056224899599",
+      "total_minutes": "544.6166666666666666666666667",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1144,
+      "avg_duration": "0.08818473193473193473193473191",
+      "total_minutes": "100.8833333333333333333333333",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 6270,
+      "avg_duration": "0.09951089845826687931951089861",
+      "total_minutes": "623.9333333333333333333333343",
+      "inbound_calls": 4
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2406,
+      "avg_duration": "0.06480326960376835688556386825",
+      "total_minutes": "155.9166666666666666666666670",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 14297,
+      "avg_duration": "0.08355832225874892168520202413",
+      "total_minutes": "1194.633333333333333333333339",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5251,
+      "avg_duration": "0.08016250872849615946168983700",
+      "total_minutes": "420.9333333333333333333333341",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5532,
+      "avg_duration": "0.08514401060496505181971559422",
+      "total_minutes": "471.0166666666666666666666672",
+      "inbound_calls": 3
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2487,
+      "avg_duration": "0.09156279319126122503685832967",
+      "total_minutes": "227.7166666666666666666666659",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4779,
+      "avg_duration": "0.09025249354816209806793610952",
+      "total_minutes": "431.3166666666666666666666674",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5981,
+      "avg_duration": "0.09114417878838544279106058084",
+      "total_minutes": "545.1333333333333333333333340",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5355,
+      "avg_duration": "0.08233737939620292561469032058",
+      "total_minutes": "440.9166666666666666666666667",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3866,
+      "avg_duration": "0.07450422486635626832212450429",
+      "total_minutes": "288.0333333333333333333333336",
+      "inbound_calls": 2
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1149,
+      "avg_duration": "0.1024804177545691906005221934",
+      "total_minutes": "117.7500000000000000000000002",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 15634,
+      "avg_duration": "0.07176879450769689991898000115",
+      "total_minutes": "1122.033333333333333333333338",
+      "inbound_calls": 5
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 64025,
+      "avg_duration": "0.08578471951060783548093192807",
+      "total_minutes": "5492.366666666666666666666695",
+      "inbound_calls": 6
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4776,
+      "avg_duration": "0.06370044667783361250697934125",
+      "total_minutes": "304.2333333333333333333333338",
+      "inbound_calls": 3
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2274,
+      "avg_duration": "0.09890061565523306948109058923",
+      "total_minutes": "224.8999999999999999999999999",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5009,
+      "avg_duration": "0.08944566447061955147401344244",
+      "total_minutes": "448.0333333333333333333333332",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2776,
+      "avg_duration": "0.09206892411143131604226705086",
+      "total_minutes": "255.5833333333333333333333332",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 98318,
+      "avg_duration": "0.09571339937753005553408328090",
+      "total_minutes": "9410.350000000000000000000012",
+      "inbound_calls": 6
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3568,
+      "avg_duration": "0.06495235426008968609865470841",
+      "total_minutes": "231.7499999999999999999999996",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 901,
+      "avg_duration": "0.07783943766185719570847206811",
+      "total_minutes": "70.13333333333333333333333337",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 80397,
+      "avg_duration": "0.07310430322856159641114303685",
+      "total_minutes": "5877.366666666666666666666734",
+      "inbound_calls": 21
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3004,
+      "avg_duration": "0.09770861074123391034176653362",
+      "total_minutes": "293.5166666666666666666666670",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5048,
+      "avg_duration": "0.09584653988378235604860010588",
+      "total_minutes": "483.8333333333333333333333345",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 799,
+      "avg_duration": "0.08410513141426783479349186486",
+      "total_minutes": "67.20000000000000000000000002",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3163,
+      "avg_duration": "0.08616819475181789440404679115",
+      "total_minutes": "272.5500000000000000000000004",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 608,
+      "avg_duration": "0.09904057017543859649122807023",
+      "total_minutes": "60.21666666666666666666666670",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5016,
+      "avg_duration": "0.09071305156831472620946305167",
+      "total_minutes": "455.0166666666666666666666672",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4008,
+      "avg_duration": "0.08847721224218230206254158363",
+      "total_minutes": "354.6166666666666666666666672",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 5346,
+      "avg_duration": "0.07138358897618156877416136691",
+      "total_minutes": "381.6166666666666666666666675",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3369,
+      "avg_duration": "0.09105570396754724448402097551",
+      "total_minutes": "306.7666666666666666666666665",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3041,
+      "avg_duration": "0.07776498958675874164200372690",
+      "total_minutes": "236.4833333333333333333333335",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 9084,
+      "avg_duration": "0.07847680904153823572581828876",
+      "total_minutes": "712.8833333333333333333333351",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 279264,
+      "avg_duration": "0.08569215270616095641877697698",
+      "total_minutes": "23930.73333333333333333333370",
+      "inbound_calls": 23
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 510138,
+      "avg_duration": "0.07623512330650399173034225253",
+      "total_minutes": "38890.43333333333333333333602",
+      "inbound_calls": 75
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 95679,
+      "avg_duration": "0.08187167508021613938272766267",
+      "total_minutes": "7833.400000000000000000000037",
+      "inbound_calls": 9
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3675,
+      "avg_duration": "0.08134240362811791383219954645",
+      "total_minutes": "298.9333333333333333333333332",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 49768,
+      "avg_duration": "0.08608945507153190805336762733",
+      "total_minutes": "4284.500000000000000000000077",
+      "inbound_calls": 5
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 14461,
+      "avg_duration": "0.1028859230574188046008805298",
+      "total_minutes": "1487.833333333333333333333342",
+      "inbound_calls": 3
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 114956,
+      "avg_duration": "0.07557065311945439994432652535",
+      "total_minutes": "8687.300000000000000000000048",
+      "inbound_calls": 7
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1448,
+      "avg_duration": "0.07679558011049723756906077348",
+      "total_minutes": "111.2000000000000000000000000",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 35986,
+      "avg_duration": "0.08598945886363215324478037798",
+      "total_minutes": "3094.416666666666666666666682",
+      "inbound_calls": 3
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 6000,
+      "avg_duration": "0.06141666666666666666666666668",
+      "total_minutes": "368.5000000000000000000000001",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 64913,
+      "avg_duration": "0.08292124330514175383461967090",
+      "total_minutes": "5382.666666666666666666666697",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2328,
+      "avg_duration": "0.07755584192439862542955326456",
+      "total_minutes": "180.5499999999999999999999999",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1466,
+      "avg_duration": "0.06784902228285584356525693498",
+      "total_minutes": "99.46666666666666666666666668",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 15786,
+      "avg_duration": "0.07833734532708306938637611472",
+      "total_minutes": "1236.633333333333333333333347",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 3686,
+      "avg_duration": "0.06773376740821124977391933443",
+      "total_minutes": "249.6666666666666666666666667",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 10654,
+      "avg_duration": "0.06302171328452537388148426267",
+      "total_minutes": "671.4333333333333333333333345",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 4179,
+      "avg_duration": "0.07145250059822924144532184740",
+      "total_minutes": "298.6000000000000000000000003",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1638,
+      "avg_duration": "0.06002238502238502238502238502",
+      "total_minutes": "98.31666666666666666666666666",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 2559,
+      "avg_duration": "0.05254656766966262863097564170",
+      "total_minutes": "134.4666666666666666666666671",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 15870,
+      "avg_duration": "0.08772106700273051879857172848",
+      "total_minutes": "1392.133333333333333333333331",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 907,
+      "avg_duration": "0.09909959573686144799705990448",
+      "total_minutes": "89.88333333333333333333333336",
+      "inbound_calls": 0
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 1042,
+      "avg_duration": "0.09380998080614203454894433781",
+      "total_minutes": "97.75000000000000000000000000",
+      "inbound_calls": 1
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 185448,
+      "avg_duration": "0.07240960628675783328300476036",
+      "total_minutes": "13428.21666666666666666666680",
+      "inbound_calls": 20
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 96560,
+      "avg_duration": "0.08244977216238608119304059707",
+      "total_minutes": "7961.350000000000000000000053",
+      "inbound_calls": 9
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 78348,
+      "avg_duration": "0.09676294651214240737904392435",
+      "total_minutes": "7581.183333333333333333333385",
+      "inbound_calls": 10
+    },
+    {
+      "prefix_2": "",
+      "prefix_3": "",
+      "prefix_4": "",
+      "calls": 104665,
+      "avg_duration": "0.07912132358795522221691428287",
+      "total_minutes": "8281.233333333333333333333417",
+      "inbound_calls": 21
+    }
+  ],
+  "status_distribution": [],
+  "hourly_performance": [],
+  "daily_performance": [],
+  "list_performance": [],
+  "recycling_status": [],
+  "custom_fields": [],
+  "active_lists": [],
+  "closer_log": [],
+  "sample_leads": [],
+  "call_time_config": [],
+  "lead_filter_config": [],
+  "lead_filter_rules": [],
+  "hopper_status": [],
+  "prefix_status_analysis": [],
+  "status_definitions": []
+}

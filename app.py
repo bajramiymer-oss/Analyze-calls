@@ -1,24 +1,37 @@
-import os, sys, shutil, pathlib, io, csv, re, time
-from datetime import datetime, timezone, timedelta
+"""
+app.py - Dashboard Kryesor
+Version: v2.0 - Overview & Quick Access
+Author: Protrade AI
+"""
+
 import streamlit as st
+import pathlib
+from datetime import datetime
 
-# --- Imports from core ---
-from core.config import OUT_DIR
-from core.transcription_audio import transcribe_audio_files
-from core.analysis_llm import write_outputs_and_report
-from core.drive_io import get_user_oauth_creds
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaIoBaseDownload
+st.set_page_config(
+    page_title="Dashboard - Vicidial Analysis",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-st.set_page_config(page_title="Vicidial – Analizë Telefonatash", page_icon="☎️", layout="wide")
-st.title("☎️ Vicidial – Analizë Telefonatash (Home)")
+# ============== HEADER ==============
+st.title("📊 Dashboard - Pasqyrë e Përgjithshme")
+st.markdown("### Vicidial Call Analysis Platform")
 
 st.markdown("""
-Ky është paneli kryesor me kontroll paraprak paketash, dhe **One‑Click Pipeline**:
-**Audio → Transkriptim → Analizë → Raport** (me tag sesioni dhe caching).
+---
+## 🚀 Çfarë mund të bësh këtu?
+
+Ky është një sistem i plotë për analizën e telefonatave nga Vicidial që kombinon:
+- 📥 Shkarkim automatik nga databaza
+- 📝 Transkriptim me AI (OpenAI Whisper)
+- 🤖 Analizë e avancuar me GPT-4
+- 📊 Gjenerim raportesh në Excel
+- 🎯 Kontekste të personalizuara për fushata të ndryshme
 """)
 
-# ---------------- Package / Env checks ----------------
+# ============== PACKAGE CHECKS ==============
 def check_pkg(name):
     try:
         __import__(name)
@@ -27,209 +40,231 @@ def check_pkg(name):
         return False, str(e)
 
 checks = {}
-for pkg in ["openpyxl", "pymysql", "docx", "requests", "googleapiclient", "google_auth_oauthlib", "openai"]:
+required_pkgs = ["openpyxl", "pymysql", "requests", "googleapiclient", "google_auth_oauthlib", "openai"]
+optional_pkgs = ["PyPDF2", "docx", "librosa"]
+
+for pkg in required_pkgs:
     ok, err = check_pkg(pkg if pkg != "docx" else "docx")
-    checks[pkg] = (ok, err)
+    checks[pkg] = (ok, err, True)  # True = required
 
-def ffmpeg_in_path():
-    import subprocess
-    try:
-        p = subprocess.run(["ffmpeg", "-version"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        return p.returncode == 0
-    except Exception:
-        return False
+for pkg in optional_pkgs:
+    ok, err = check_pkg(pkg if pkg != "docx" else "docx")
+    checks[pkg] = (ok, err, False)  # False = optional
 
-with st.expander("🩺 Kontroll paraprak (paketa & mjedisi)"):
-    cols = st.columns(3)
-    pkgs = list(checks.items())
-    for i, (name, (ok, err)) in enumerate(pkgs):
-        with cols[i % 3]:
-            st.write(("✅" if ok else "❌") + f" {name}")
-            if not ok and err:
-                st.caption(err)
-    st.write(("✅" if ffmpeg_in_path() else "❌") + " ffmpeg në PATH")
+with st.expander("🩺 Statusi i Sistemit", expanded=True):
+    col1, col2 = st.columns(2)
 
-# ---------------- One‑Click Pipeline ----------------
-st.header("⚡ One‑Click Pipeline")
-st.caption("Zgjidh burimin, emrin e sesionit dhe shtyp butonin. Sistemi do transkriptojë me caching dhe do prodhojë raportet.")
+    with col1:
+        st.markdown("#### Paketa të Nevojshme")
+        for name, (ok, err, required) in checks.items():
+            if required:
+                icon = "✅" if ok else "❌"
+                st.write(f"{icon} {name}")
+                if not ok and err:
+                    st.caption(f"⚠️ {err[:80]}")
 
-session_tag = st.text_input("Emri i sesionit (do përdoret në emrat e skedarëve të output-it)", placeholder="p.sh. 2025-10-06_Batch1")
+    with col2:
+        st.markdown("#### Paketa Opsionale")
+        for name, (ok, err, required) in checks.items():
+            if not required:
+                icon = "✅" if ok else "⚪"
+                st.write(f"{icon} {name}")
 
-source = st.radio("Burimi i audios:", ["Lokal (folder me audio)", "Drive (Session Folder ID)"], index=0, horizontal=True)
-
-colA, colB, colC = st.columns(3)
-with colA:
-    reuse_existing = st.checkbox("Shmang duplikimet (caching)", value=True)
-with colB:
-    save_docx = st.checkbox("Ruaj edhe .docx", value=False)
-with colC:
-    force = st.checkbox("Forco rinormalizim/ritranskriptim", value=False)
-
-max_calls = st.number_input("Maksimumi i thirrjeve", 1, 10000, 500)
-
-# Opsional: CSV mapping (filename,agent,campaign)
-mapping_file = st.file_uploader("Opsional: CSV mapping (kolonat: filename, agent, campaign)", type=["csv"])
-
-def parse_mapping_csv(buf) -> dict:
-    if not buf: return {}
-    text = buf.getvalue().decode("utf-8", errors="ignore")
-    rdr = csv.DictReader(io.StringIO(text))
-    m = {}
-    for row in rdr:
-        fname = (row.get("filename") or "").strip().lower()
-        if not fname: continue
-        m[fname] = {
-            "agent": (row.get("agent") or "").strip(),
-            "campaign": (row.get("campaign") or "").strip(),
-        }
-    return m
-
-AUDIO_EXTS = {".mp3",".wav",".m4a",".mp4",".ogg",".flac"}
-COMMON_BAD = {"new folder","documents","downloads","desktop","vicidial_agent","data","out_analysis"}
-
-def pick_agent_from_path(p: pathlib.Path) -> str:
-    parts = [x.lower() for x in p.parts]
-    for seg in reversed(parts):
-        s = seg.replace("_"," ").strip()
-        if len(s.split()) <= 3 and s not in COMMON_BAD and "." not in s:
-            return s.title()
-    return "UNKNOWN"
-
-def drive_list_children(service, folder_id):
-    items, page_token = [], None
-    while True:
-        resp = service.files().list(
-            q=f"'{folder_id}' in parents and trashed=false",
-            fields="nextPageToken, files(id,name,mimeType,parents)",
-            pageToken=page_token, pageSize=1000
-        ).execute()
-        items.extend(resp.get("files", []))
-        page_token = resp.get("nextPageToken")
-        if not page_token: break
-    return items
-
-def drive_walk_audio(service, root_folder_id):
-    stack = [(root_folder_id, "")]; results = []
-    while stack:
-        fid, prefix = stack.pop()
-        for it in drive_list_children(service, fid):
-            if it["mimeType"] == "application/vnd.google-apps.folder":
-                stack.append((it["id"], f"{prefix}/{it['name']}".strip("/")))
-            else:
-                name = it["name"]
-                if any(name.lower().endswith(ext) for ext in AUDIO_EXTS):
-                    results.append((it["id"], name, prefix))
-    return results
-
-def drive_download_file(service, file_id, out_path: pathlib.Path):
-    req = service.files().get_media(fileId=file_id)
-    with open(out_path, "wb") as f:
-        dl = MediaIoBaseDownload(f, req)
-        done = False
-        while not done:
-            _, done = dl.next_chunk()
-
-if source == "Lokal (folder me audio)":
-    local_audio_root = st.text_input("Path i folderit lokal me audio", value=str(pathlib.Path.cwd()))
-else:
-    drive_session_raw = st.text_input("Drive: Session Folder ID (ose link i plotë)")
-    if st.button("Re-link Google Drive (re-auth)"):
-        try:
-            from core.drive_io import force_reauth
-            force_reauth(readonly=True)
-            st.success("Relidhja u krye.")
-        except Exception as e:
-            st.error(f"Re-auth dështoi: {e}")
-
-run = st.button("Nise pipeline‑in", type="primary", use_container_width=True)
-
-if run:
-    if not session_tag:
-        st.error("Vendos një emër sesioni.")
-        st.stop()
-
-    mapping = parse_mapping_csv(mapping_file) if mapping_file else {}
-    prog = st.progress(0, text="Duke nisur pipeline-in...")
-    status = st.empty()
-
-    # 1) Mblidh audion
-    audio_paths = []
-    if source == "Lokal (folder me audio)":
-        root = pathlib.Path(local_audio_root)
-        audio_paths = [p for p in root.rglob("*") if p.suffix.lower() in AUDIO_EXTS]
-        if not audio_paths:
-            st.warning("S'u gjet asnjë audio në atë folder.")
-            st.stop()
-        audio_paths = audio_paths[: int(max_calls)]
-        status.info(f"U gjetën {len(audio_paths)} audio lokale.")
-    else:
-        # Drive
-        m = re.search(r"/folders/([A-Za-z0-9_-]+)", (drive_session_raw or "").strip())
-        drive_session_id = m.group(1) if m else (drive_session_raw or "").strip()
-        creds = get_user_oauth_creds(readonly=True)
-        drive = build("drive", "v3", credentials=creds)
-        items = drive_walk_audio(drive, drive_session_id)
-        if not items:
-            st.warning("S'u gjet asnjë audio në atë folder Drive.")
-            st.stop()
-        tmpdir = pathlib.Path("tmp_pipeline_audio"); tmpdir.mkdir(exist_ok=True)
-        total_download = min(len(items), int(max_calls))
-        for i, (fid, name, folder_path) in enumerate(items[:total_download], 1):
-            outp = tmpdir / name
-            drive_download_file(drive, fid, outp)
-            audio_paths.append(outp)
-            prog.progress(int(i/total_download*20), text=f"Shkarkim nga Drive {i}/{total_download}…")
-        status.info(f"U shkarkuan {len(audio_paths)} audio nga Drive.")
-
-    # 2) Transkripto me caching/smart-normalize
-    prog.progress(25, text="Transkriptim…")
-    out = transcribe_audio_files(
-        input_paths=audio_paths,
-        out_dir=OUT_DIR,
-        mode="per-file",
-        session_name=session_tag,
-        subpath="Transkripte",
-        save_txt=True,
-        save_docx=save_docx,
-        reuse_existing=reuse_existing,
-        force=force,
-    )
-
-    txts = out.get("txt_paths", [])
-    status.info(f"U krijuan {len(txts)} transkripte. Po përgatis analizën…")
-
-    # 3) Ndërto metadatë për analizë
-    prog.progress(60, text="Përgatitje analizash…")
-    calls = []
-    for p in txts:
-        agent_guess = pick_agent_from_path(p)
-        campaign_guess = p.parent.name if p.parent else "UNKNOWN"
-        stem = p.name.lower()
-        if stem in mapping:
-            agent_guess = mapping[stem].get("agent") or agent_guess
-            campaign_guess = mapping[stem].get("campaign") or campaign_guess
-        meta = {"call_id": p.name, "agent": agent_guess, "campaign": campaign_guess,
-                "start_time": datetime.now(timezone.utc).isoformat(), "duration_sec": None, "language": "auto",
-                "transcript_path": str(p), "source":"local", "processed_at": datetime.now(timezone.utc).isoformat()}
-        calls.append(meta)
-
-    # 4) Analizo dhe prodho raportet
-    prog.progress(85, text="Analizë LLM + Raporte…")
-    call_csv, weekly_csv, xlsx = write_outputs_and_report(calls, session_tag=session_tag)
-
-    prog.progress(100, text="✅ Përfunduar")
-    status.success("Pipeline u përfundua me sukses. Shkarko output-et më poshtë.")
-
-    col1, col2, col3 = st.columns(3)
-    with open(call_csv, "rb") as f:
-        col1.download_button("⬇️ call_analysis", f.read(), file_name=pathlib.Path(call_csv).name,
-                             mime="text/csv", use_container_width=True)
-    with open(weekly_csv, "rb") as f:
-        col2.download_button("⬇️ agent_summary_weekly", f.read(), file_name=pathlib.Path(weekly_csv).name,
-                             mime="text/csv", use_container_width=True)
-    with open(xlsx, "rb") as f:
-        col3.download_button("⬇️ Raport_Analize", f.read(), file_name=pathlib.Path(xlsx).name,
-                             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use_container_width=True)
+        # OpenAI Key check
+        import os
+        has_key = bool(os.getenv("OPENAI_API_KEY"))
+        if not has_key:
+            try:
+                has_key = bool(st.secrets.get("OPENAI_API_KEY"))
+            except:
+                pass
+        st.write(("✅" if has_key else "❌") + " OPENAI_API_KEY")
 
 st.markdown("---")
-st.caption("Këshillë: përdor **session_tag** unik për çdo batch që të shmangësh mbishkrimin e skedarëve.")
+
+# ============== QUICK ACCESS MENU ==============
+st.markdown("## 🎯 Zgjidhni ku të shkoni:")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("### ⚡ Pipeline Komplet")
+    st.markdown("""
+    **Procesi i plotë automatik:**
+    - 📞 Vicidial Database
+    - 📁 Folder Lokal
+    - ☁️ Google Drive
+
+    → Transkriptim → Analizë → Raport
+
+    🎯 Mbështet kontekste fushatash
+    """)
+    if st.button("➡️ Shko te Pipeline Komplet", use_container_width=True, type="primary"):
+        st.switch_page("pages/1_Pipeline_Komplet.py")
+
+with col2:
+    st.markdown("### 🛠️ Mjete të Ndara")
+    st.markdown("""
+    **Ekzekuto hapa individualë:**
+    - 📥 Filtrim & Shkarkim
+    - ☁️ Drive Upload
+    - 📝 Transkriptim Manual
+
+    Për testing dhe debugging
+    """)
+    if st.button("➡️ Shko te Mjete", use_container_width=True):
+        st.switch_page("pages/4_Tools.py")
+
+with col3:
+    st.markdown("### 📊 Raporte & Settings")
+    st.markdown("""
+    **Raportet dhe konfigurimet:**
+    - 📈 Smart Reports
+    - 📋 Rezultatet e Listave
+    - ⚙️ Settings & Campaigns
+
+    Shiko rezultatet dhe ndrysho parametrat
+    """)
+    if st.button("➡️ Shko te Raporte", use_container_width=True):
+        st.switch_page("pages/2_Raporte.py")
+
+st.markdown("---")
+
+# ============== RECENT OUTPUTS ==============
+st.markdown("## 📂 Outpute të Fundit")
+
+from core.config import OUT_DIR
+
+if OUT_DIR.exists():
+    # Gjej 5 sessionet më të fundit
+    sessions = []
+    for item in OUT_DIR.iterdir():
+        if item.is_dir():
+            try:
+                mtime = item.stat().st_mtime
+                sessions.append((item.name, datetime.fromtimestamp(mtime), item))
+            except:
+                pass
+
+    sessions.sort(key=lambda x: x[1], reverse=True)
+
+    if sessions:
+        st.markdown("### 📁 Sessionet e Fundit:")
+        for i, (name, mtime, path) in enumerate(sessions[:5], 1):
+            col_a, col_b, col_c = st.columns([3, 2, 1])
+            with col_a:
+                st.text(f"{i}. {name}")
+            with col_b:
+                st.caption(mtime.strftime("%Y-%m-%d %H:%M"))
+            with col_c:
+                # Check for Excel report
+                xlsx_files = list(path.glob("Raport_Analize*.xlsx"))
+                if xlsx_files:
+                    with open(xlsx_files[0], "rb") as f:
+                        st.download_button(
+                            "⬇️ Excel",
+                            f.read(),
+                            file_name=xlsx_files[0].name,
+                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                            key=f"download_{i}"
+                        )
+    else:
+        st.info("Nuk ka outpute ende. Shko te 'Pipeline Komplet' për të filluar!")
+else:
+    st.info("Nuk ka outpute ende. Shko te 'Pipeline Komplet' për të filluar!")
+
+st.markdown("---")
+
+# ============== CAMPAIGN OVERVIEW ==============
+st.markdown("## 🎯 Kampanjat e Konfiguruara")
+
+from core.campaign_manager import get_all_campaigns
+
+campaigns = get_all_campaigns()
+
+if campaigns:
+    st.markdown(f"**Total:** {len(campaigns)} fushatë/kontekste")
+
+    # Show first 3 campaigns
+    for camp in campaigns[:3]:
+        with st.expander(f"📁 {camp['name']}", expanded=False):
+            col_c1, col_c2 = st.columns(2)
+            with col_c1:
+                st.caption(f"**Dokumente:** {len(camp.get('documents', []))}")
+                st.caption(f"**Faqe totale:** {camp.get('total_pages', 0)}")
+            with col_c2:
+                st.caption(f"**Krijuar:** {camp['created_date'][:10]}")
+                st.caption(f"**Modifikuar:** {camp['last_modified'][:10]}")
+
+            if camp.get('project_context_hint'):
+                st.text_area("Konteksti:", value=camp['project_context_hint'][:150] + "...", height=60, disabled=True, key=f"camp_ctx_{camp['id']}")
+
+    if len(campaigns) > 3:
+        st.caption(f"+ {len(campaigns) - 3} të tjera...")
+
+    if st.button("➡️ Menaxho Kampanjat", use_container_width=True):
+        st.switch_page("pages/5_Settings.py")
+else:
+    st.info("Nuk ka kampanja të konfiguruara. Shko te 'Settings' për të krijuar!")
+    if st.button("➡️ Krijo Kampanjën e Parë", use_container_width=True):
+        st.switch_page("pages/5_Settings.py")
+
+st.markdown("---")
+
+# ============== QUICK STATS ==============
+st.markdown("## 📈 Statistika të Shpejta")
+
+col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
+
+# Count total transcripts
+total_transcripts = 0
+total_analyses = 0
+total_size_mb = 0
+
+if OUT_DIR.exists():
+    for session_dir in OUT_DIR.iterdir():
+        if session_dir.is_dir():
+            # Count transcripts
+            transcript_dir = session_dir / "Transkripte"
+            if transcript_dir.exists():
+                total_transcripts += len(list(transcript_dir.rglob("*.txt")))
+
+            # Count analyses
+            csv_files = list(session_dir.glob("call_analysis*.csv"))
+            if csv_files:
+                total_analyses += 1
+
+            # Calculate size
+            try:
+                for f in session_dir.rglob("*"):
+                    if f.is_file():
+                        total_size_mb += f.stat().st_size / (1024 * 1024)
+            except:
+                pass
+
+with col_stat1:
+    st.metric("Transkripte", f"{total_transcripts}")
+
+with col_stat2:
+    st.metric("Analiza", f"{total_analyses}")
+
+with col_stat3:
+    st.metric("Kampanja", f"{len(campaigns)}")
+
+with col_stat4:
+    st.metric("Hapësira", f"{total_size_mb:.1f} MB")
+
+st.markdown("---")
+
+# ============== FOOTER ==============
+st.info("""
+💡 **Këshillë për fillim:**
+1. Shko te **Settings** dhe krijo një kampanjë të re me kontekst dhe dokumente
+2. Shko te **Pipeline Komplet** dhe zgjidh kampanjën që krijove
+3. Ngarko audio ose lidhu me Vicidial/Drive dhe kliko "Nise Pipeline-in"
+4. Prit rezultatet dhe shiko raportet në Excel! 🎉
+
+📖 **Dokumentacion:** Çdo faqe ka instruksione të detajuara.
+""")
+
+st.caption("Protrade AI © 2025 - Vicidial Call Analysis Platform v2.0")

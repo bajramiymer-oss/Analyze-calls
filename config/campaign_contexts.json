@@ -1,0 +1,53 @@
+{
+  "campaigns": [
+    {
+      "id": "google_reserve_uk___restorante_fb8610",
+      "name": "GOOGLE RESERVE UK - RESTORANTE",
+      "created_date": "2025-10-15T11:34:13.456765",
+      "last_modified": "2025-10-15T11:34:13.686438",
+      "project_context_hint": "",
+      "summary_hint": "",
+      "bullets_hint": "",
+      "documents": [
+        {
+          "filename": "CALL_SCRIPT_MOVYLO_BOOK_NOW.docx",
+          "original_name": "CALL_SCRIPT_MOVYLO_BOOK_NOW.docx",
+          "uploaded_date": "2025-10-15T11:34:13.509573",
+          "size_kb": 36,
+          "pages": 1
+        },
+        {
+          "filename": "THE MARKETING PLATFORM THAT HELPS YOU FIND CUSTOMERS AND INCREASES SALES BY PROMOTING YOU AUTOMATICALLY.docx",
+          "original_name": "THE MARKETING PLATFORM THAT HELPS YOU FIND CUSTOMERS AND INCREASES SALES BY PROMOTING YOU AUTOMATICALLY.docx",
+          "uploaded_date": "2025-10-15T11:34:13.540986",
+          "size_kb": 15,
+          "pages": 2
+        },
+        {
+          "filename": "Microbusinesses in the UK (1).docx",
+          "original_name": "Microbusinesses in the UK (1).docx",
+          "uploaded_date": "2025-10-15T11:34:13.686349",
+          "size_kb": 572,
+          "pages": 1
+        }
+      ],
+      "total_pages": 4,
+      "total_size_kb": 623
+    }
+  ],
+  "settings": {
+    "max_documents_per_campaign": 3,
+    "max_file_size_mb": 5,
+    "max_total_pages": 50
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -18,6 +18,26 @@ DRIVE_PARENT_ID = st.secrets.get("DRIVE_PARENT_ID", "") if hasattr(st, "secrets"
 # Vicidial / Web
 VICIDIAL_WEB = os.environ.get("VICIDIAL_WEB", "")  # p.sh. https://user:pass@vicidial.example.com
 
+# Network throttling / parallelism (from Settings)
+def get_network_limits():
+    """Lexon limite rrjeti nga st.secrets ose environment.
+    Kthe: {
+      'max_parallel_downloads': int,
+      'throttle_kbps': int
+    }
+    """
+    defaults = {"max_parallel_downloads": 3, "throttle_kbps": 0}
+    try:
+        limits = st.secrets.get("network", {})
+        mpd = int(limits.get("max_parallel_downloads", defaults["max_parallel_downloads"]))
+        thr = int(limits.get("throttle_kbps", defaults["throttle_kbps"]))
+        return {"max_parallel_downloads": mpd, "throttle_kbps": thr}
+    except Exception:
+        # Fallback to env
+        mpd = int(os.getenv("NET_MAX_PARALLEL", defaults["max_parallel_downloads"]))
+        thr = int(os.getenv("NET_THROTTLE_KBPS", defaults["throttle_kbps"]))
+        return {"max_parallel_downloads": mpd, "throttle_kbps": thr}
+
 def load_openai_key() -> str:
     key = os.environ.get("OPENAI_API_KEY", "")
     if key:

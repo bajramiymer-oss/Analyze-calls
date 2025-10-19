@@ -1,0 +1,17 @@
+{
+  "dial_statuses_for_dials": [
+    "A",
+    "AA",
+    "AB",
+    "ADC",
+    "B",
+    "NA",
+    "PDROP",
+    "SVYCLM",
+    "PU"
+  ],
+  "updated_at": "2025-10-15T20:49:13+02:00",
+  "allow_all_statuses": true,
+  "network_max_parallel_downloads": 3,
+  "network_throttle_kbps": 0
+}
